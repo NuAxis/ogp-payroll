@@ -80,6 +80,7 @@ a:visited {
 .usa-site-header {
   border-bottom: 1px solid $color-gray-light;
   padding: 3rem 0;
+  background-color: #122E51;
 }
 
 .logo {
@@ -122,6 +123,29 @@ a:visited {
   p {
     margin-top: 3px;
   }
+}
+
+.header-title
+{
+  color: #FFFFFF ! important;
+}
+
+.header-left-menu li
+{
+  list-style: none;
+  float:left;
+  margin-left: 20px;
+  color: #FFFFFF;
+
+  a{
+    color: #FFFFFF ! important;
+  }
+
+}
+
+.profile-title
+{
+  color:#FFFFF;
 }
 
 .header-alert {
@@ -227,11 +251,11 @@ table {
     td, th {
       @include padding(.7rem null);
     }
-    
+
     .col-not_received {
       @include padding(1.5rem null);
     }
-    
+
     .row-normal {
       th, td {
         padding: 1.5rem;
@@ -501,11 +525,11 @@ td input[type="checkbox"] + label {
   width: 12rem;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   appearance: none;
-  margin: 0; 
+  margin: 0;
 }
 
 .enter-worker-details {
@@ -748,7 +772,7 @@ label[for="select-plans"] {
     bottom: 100%;
     color: #fff;
     font-size: 13px;
-    left: 50%; 
+    left: 50%;
     padding: 5px 8px;
     margin-left: -100px; /* Use half of the width (120/2 = 60), to center the tooltip */
     width: 200px;

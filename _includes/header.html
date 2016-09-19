@@ -4,7 +4,7 @@
   <nav class="navbar">
     <div class="logo">
       <h1>
-        <a href="{{ site.baseurl }}/" accesskey="1" title="Home" aria-label="Home">
+        <a href="{{ site.baseurl }}/" accesskey="1" title="Home" aria-label="Home" class="header-title">
           Certified Payroll Reporting
         </a>
       </h1>
@@ -13,14 +13,26 @@
     {% if page.logged == 'no' %}
       <p>Welcome! <a href="/">Please log in</a></p>
     {% else %}
-      <p>
-        Logged in as ACME Construction <a href="{{ site.baseurl }}/profile/acme/">(profile)</a> <span class="header-divider">|</span> 
-        <a class="header-alert" href="#">
-          <i class="fa fa-bell" aria-hidden="false"></i>
-          <span>+2</span>
-        </a>
-      </p>
-      
+
+      <div class="header-left-menu">
+        <li>
+            Dashboard
+        </li>
+
+        <li>
+            Contracts
+        </li>
+        <li>
+          <!-- Main Title -->
+          Logged in as ACME Construction <a href="/ogp-payroll/profile/acme/">(profile)</a> <span class="header-divider">|</span>
+          <a class="header-alert" href="#" class="profile-title">
+            <i class="fa fa-bell" aria-hidden="false"></i>
+            <span>+2</span>
+          </a>
+        </li>
+
+      </div>
+
     {% endif %}
     </div>
   </nav>
