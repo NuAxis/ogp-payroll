@@ -2,6 +2,8 @@
 // Do not modify.
 // These variables can be modified in _variables.scss
 
+// scss-lint:
+
 // Typography
 $em-base:             10px; // default is already defined in bourbon
 $base-font-size:      rem(17px) !default;
@@ -20,10 +22,13 @@ $lead-line-height:    1.7 !default;
 
 $font-sans:           'Source Sans Pro', $helvetica !default;
 $font-serif:          'Merriweather', $georgia !default;
+$font-path:           '../fonts' !default;
+$asset-pipeline:      false !default;
 
 $font-normal:         400 !default;
 $font-bold:           700 !default;
 
+$image-path:           '../img' !default;
 
 // Color
 $color-primary:              #0071bc !default;
@@ -47,7 +52,7 @@ $color-base:                 #212121 !default;
 $color-black:                #000000 !default;
 
 $color-gray-dark:            #323a45 !default;
-$color-gray:                 #205493 !default; // lighten($color-gray-dark, 20%)
+$color-gray:                 #5b616b !default; // lighten($color-gray-dark, 20%)
 $color-gray-medium:          #757575 !default; // lightest gray that passes color contrast
 $color-gray-light:           #aeb0b5 !default; // lighten($color-gray-dark, 60%)
 $color-gray-lighter:         #d6d7d9 !default; // lighten($color-gray-dark, 80%)
@@ -75,6 +80,8 @@ $color-cool-blue-lightest:   #dce4ef !default; // lighten($color-cool-blue, 90%)
 $color-focus:                #3e94cf !default;
 $color-visited:              #4c2c92 !default;
 
+$color-shadow:               rgba(#000, 0.3) !default;
+
 
 // Mobile First Breakpoints
 $small-screen:      481px !default;
@@ -83,12 +90,17 @@ $large-screen:      1201px !default;
 
 
 // Magic Numbers
-$text-max-width:    53rem !default;
-$site-max-width:    1040px !default;
-$site-margins:      3rem !default;
-$article-max-width: 600px !default;
-$input-max-width:   46rem !default;
-$border-radius:     rem(3px) !default;
-$box-shadow:        0 0 2px rgba(#000, 0.3) !default;
-$focus-shadow:      0 0 3px $color-focus, 0 0 7px $color-focus !default;
-$grid-margins:      3rem !default;
+$text-max-width:      53rem !default;
+$lead-max-width:      77rem !default;
+$site-max-width:      1040px !default;
+$site-margins:        3rem !default;
+$site-margins-mobile: 1.5rem !default;
+$article-max-width:   600px !default;
+$input-max-width:     46rem !default;
+$border-radius:       rem(3px) !default;
+$box-shadow:          0 0 2px $color-shadow !default;
+$focus-shadow:        0 0 3px $color-focus, 0 0 7px $color-focus !default;
+$nav-width:           951px !default;
+
+// 44 x 44 pixels hit target following Apple iOS Human Interface Guidelines
+$hit-area:          4.4rem !default;
