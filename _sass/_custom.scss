@@ -314,7 +314,7 @@ a.disabled {
   @include media($large-screen) {
     .table-filter {
       background-color: $color-gray-warm-light;
-      color: $cpa-color-header-gray;
+      color: $color-gray-dark;
       padding: 1.5rem 2rem;
 
       .filter-title {
