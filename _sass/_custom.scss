@@ -195,6 +195,33 @@ a.disabled {
   }
 }
 
+.login {
+  .sign-in-google {
+    background-color: #d54331;
+
+    &:hover {
+      background-color: #cb3927;
+    }
+  }
+
+  .sign-in-cloud-gov {
+    .ico-cloud-gov {
+      background: url(../img/cloud_gov.png) no-repeat right 1px;
+      background-size: 16px 16px;
+    }
+
+    span {
+      padding-left: 3px;
+    }
+  }
+
+  p.section {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+
+
 .main-content {
   margin-top: 8rem;
 }
@@ -217,12 +244,28 @@ a.disabled {
   margin-left: 5em;
 }
 
-// Footer ------------- //
+// darker ------------- //
 
 .site-footer {
+  background-color: $color-primary-darkest;
   margin-top: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-size: 1.3rem;
+  color: $color-white;
+
   img {
     height: 72px;
+    margin-top: 13px;
+  }
+
+  a {
+    color: $color-white;
+    text-decoration: none;
+  }
+
+  ul {
+    margin-top: 5px;
   }
 }
 
