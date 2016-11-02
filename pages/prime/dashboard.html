@@ -8,49 +8,21 @@ permalink: /dashboard/
   <p><a class="usa-button" href="{{ site.baseurl }}/add-new-payroll/">Create new payroll record</a>
   <br>
   <small>No work done this week? You'll still need to file a no-work payroll.</small></p>
-
-  <h2>Manage my payroll</h2>
 </div><!--closing div from template-->
-<div class="usa-grid">
-  <div class="usa-width-one-fourth">
-    <h4 style="margin: 0;">Filter by:</h4>
-    <fieldset class="Week end date">
-      <label>Week end date</label>
-      <div class="usa-date-of-birth">
-        <div class="usa-datefield usa-form-group usa-form-group-month">
-          <label for="end_month">Month</label>
-          <input aria-describedby="dobHint" class="usa-form-control" id="end_month" name="end_week" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="">
-        </div>
-        <div class="usa-datefield usa-form-group usa-form-group-day">
-          <label for="end_day">Day</label>
-          <input aria-describedby="dobHint" class="usa-form-control" id="end_day" name="end_week" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="">
-        </div>
-        <div class="usa-datefield usa-form-group usa-form-group-year">
-          <label for="end_day">Year</label>
-          <input aria-describedby="dobHint" class="usa-form-control" id="end_year" name="end_week" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="">
-        </div>
-      </div>
-      <input id="show-end-date" type="checkbox" name="select" value="show-end-date">
-      <label for="show-end-date">Date range</label>
-      <div class="usa-date-of-birth" style="display: none;">
-        <div class="usa-datefield usa-form-group usa-form-group-month">
-          <label for="end_month">Month</label>
-          <input aria-describedby="dobHint" class="usa-form-control" id="end_month" name="end_week" pattern="0?[1-9]|1[012]" type="number" min="1" max="12" value="">
-        </div>
-        <div class="usa-datefield usa-form-group usa-form-group-day">
-          <label for="end_day">Day</label>
-          <input aria-describedby="dobHint" class="usa-form-control" id="end_day" name="end_week" pattern="0?[1-9]|1[0-9]|2[0-9]|3[01]" type="number" min="1" max="31" value="">
-        </div>
-        <div class="usa-datefield usa-form-group usa-form-group-year">
-          <label for="end_day">Year</label>
-          <input aria-describedby="dobHint" class="usa-form-control" id="end_year" name="end_week" pattern="[0-9]{4}" type="number" min="1900" max="2000" value="">
-        </div>
-      </div>
-    </fieldset>
-</div>
-<div class="usa-width-one-fourth" style="margin-top: 45px;">
-      <label for="status">Payroll status</label>
-      <select name="status" id="status">
+
+<div class="usa-grid table-filter-grid">
+  <div class="table-filter">
+    <div class="filter-title"><strong>Filter</strong></div>
+    <div class="filter-group">
+      <span>Date rage:</span>
+      <input type="text" placeholder="MM/DD/YY">
+    </div>
+    <div class="filter-group attached">
+      <span>to</span>
+      <input type="text" placeholder="MM/DD/YY">
+    </div>
+    <div class="filter-group">
+      <select name="status" id="status" aria-label="status">
         <option value="actionable">Actionable statuses</option>
         <option value="all">All statuses</option>
         <option value="sent">Sent</option>
@@ -58,19 +30,17 @@ permalink: /dashboard/
         <option value="flagged">Flagged</option>
         <option value="delinquent">Delinquent</option>
       </select>
-  </div>
-  <div class="usa-width-one-fourth" style="margin-top: 45px;">
-      <label for="contract-number">Contract number</label>
-      <select name="contract-number" id="contract-number">
+    </div>
+    <div class="filter-group">
+      <select name="contract-number" id="contract-number" aria-label="contract number">
         <option value="all">All contracts</option>
         <option value="ace-ce-4156">ACE-CE-4156</option>
         <option value="ace-ce-1654">ACE-CE-1654</option>
         <option value="ace-ce-6234">ACE-CE-6234</option>
       </select>
-  </div>
-  <div class="usa-width-one-fourth" style="margin-top: 45px;">
-      <label for="contractor">Contractor name</label>
-      <select name="contractor" id="contractor">
+    </div>
+    <div class="filter-group">
+      <select name="contractor" id="contractor" aria-label="contractor">
         <option value="all">All contractors</option>
         <option value="acme-construction">ACME Construction (self)</option>
         <option value="diggedy-dozer">Diggedy Dozer</option>
@@ -79,12 +49,14 @@ permalink: /dashboard/
         <option value="roof-doctor">Roof Doctor</option>
         <option value="vandelay-industries">Vandelay Industries</option>
       </select>
+    </div>
   </div>
 </div>
+
 <div class="usa-grid">
   <div class="usa-width-one-whole">
     <div id="payrolls">
-    <table class="usa-table-borderless zebra">
+    <table class="usa-table-borderless zebra cpa-table">
       <thead>
         <tr>
           <th scope="col">
@@ -364,12 +336,7 @@ permalink: /dashboard/
       </tbody>
     </table>
 
-    <div class="usa-alert usa-alert-info">
-      <div class="usa-alert-body">
-        <h3 class="usa-alert-heading">Send selected payrolls</h3>
-        <p class="usa-alert-text">Send selected payrolls to the contracting officer.</p>
-        <button>Send payrolls</button>
-      </div>
-    </div>
+    <p class="usa-alert-text">Click to submit selected payrolls.</p>
+    <button>Submit selected payrolls</button>
   </div>
 </div>
