@@ -1,6 +1,5 @@
 
 // Custom styles ---------- //
-
 small {
   font-size: 90%;
 }
@@ -25,6 +24,8 @@ table {
 
   th {
    text-align: left;
+   border: none;
+   background-color: inherit;
   }
 
   td {
@@ -304,64 +305,72 @@ a.disabled {
   margin-top: 40px;
   margin-bottom: -10px;
 
-  @include media($large-screen) {
-    .table-filter {
-      background-color: $color-gray-warm-light;
-      color: $color-gray-dark;
-      padding: 1.5rem 2rem;
+  .table-filter {
+    background-color: $color-gray-warm-light;
+    color: $color-gray-dark;
+    padding: 1.5rem 2rem;
+    min-width: 980px;
 
-      .filter-title {
-        margin-right: 2rem;
-        display: inline-block;
+    .filter-title {
+      margin-right: 2rem;
+      display: inline-block;
+    }
+
+    .filter-group {
+      margin-left: 2rem;
+      display: inline-block;
+      font-size: $small-font-size;
+
+      input, select {
+        height: 3rem;
+        margin: 0 0;
       }
 
-      .filter-group {
-        margin-left: 2rem;
+      input {
+        margin-left: 0.5rem;
         display: inline-block;
-        font-size: $small-font-size;
+        padding: 1rem 1rem;
+        font-size: inherit;
+        max-width: 8.7rem;
+      }
 
-        input, select {
-          height: 3rem;
-          margin: 0 0;
-        }
+      select {
+        font-size: inherit;
+        padding: 0.5rem 1rem;
+        width: 155px;
+        min-width: 155px;
+      }
 
-        input {
-          margin-left: 0.5rem;
-          display: inline-block;
-          padding: 1rem 1rem;
-          font-size: inherit;
-          max-width: 8.7rem;
-        }
+      #contractor {
+        min-width: 205px;
+      }
 
-        select {
-          font-size: inherit;
-          padding: 0.5rem 1rem;
-          width: 155px;
-          min-width: 155px;
-        }
-
-        #contractor {
-          min-width: 205px;
-        }
-
-        &.attached {
-          margin-left: 0.5rem;
-          margin-right: 1rem;
-        }
+      &.attached {
+        margin-left: 0.5rem;
+        margin-right: 1rem;
       }
     }
   }
 }
 
 .cpa-table {
+  width: 100%;
+  min-width: $nav-width;
+
   thead tr {
     border: 1px solid $color-gray-warm-dark;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+
+    th {
+      background-color: $color-primary-alt-lightest;
+    }
   }
-  th {
-    background-color: $color-primary-alt-lightest;
-  }
+}
+
+.cpa-table-large {
+  min-width: $large-screen;
+  width: 100%;
 }
 
 
