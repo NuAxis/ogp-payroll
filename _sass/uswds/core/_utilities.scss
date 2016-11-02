@@ -6,36 +6,39 @@
 }
 
 // Screen reader only helper
-.usa-sr-only {
-  position: absolute;
-  left:-999em;
-}
-
 @mixin sr-only() {
   position: absolute;
-  left:-999em;
+  left: -999em;
+}
+
+.usa-sr-only {
+  @include sr-only();
+}
+
+// Aria hidden helper
+@mixin accessibly-hidden() {
+  &[aria-hidden=true] {
+    display: none;
+  }
 }
 
 // Unstyled list helper
-
 @mixin unstyled-list() {
-  display: block;
+  @include margin(0 null);
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  padding-left: 0;
 
-  li {
-    display: list-item;
-    margin: 0;
-
-    &:before {
-      display: none;
-    }
-
-    &:after {
-      display: none;
-    }
+  > li {
+    margin-bottom: 0;
   }
+}
+
+// Font smoothing mixin
+// Only use for light text on dark background
+// TODO: Remove after adding PostCSS
+@mixin font-smoothing {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 // Content size helpers
@@ -85,6 +88,31 @@
       float: right;
       margin-left: 2em;
       margin-top: 0.5em;
+    }
+  }
+}
+
+@mixin display-icon($icon, $direction, $size, $margin, $hover) {
+  &::#{$direction} {
+    background-image: url(#{$image-path}/#{$icon}.png);
+    background-image: url(#{$image-path}/#{$icon}.svg);
+    background-size: 100%;
+    content: '';
+    display: inline-block;
+    height: $size;
+    width: $size;
+
+    @if $direction == 'after' {
+      margin-left: $margin;
+    } @else {
+      margin-right: $margin;
+    }
+  }
+
+  @if $hover == 'hover' {
+    &:hover::#{$direction} {
+      background-image: url(#{$image-path}/#{$icon}-hover.png);
+      background-image: url(#{$image-path}/#{$icon}-hover.svg);
     }
   }
 }

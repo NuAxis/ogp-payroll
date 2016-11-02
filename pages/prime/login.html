@@ -1,27 +1,55 @@
 ---
 layout: default
-title: Certified Payroll Reporting
+title: Welcome. Please sign in.
 permalink: /
 logged: 'no'
 ---
 
 <h1>{{ page.title }}</h1>
-<p class="usa-font-lead">If you are a contractor working on federal construction projects, you can use this Certified Payroll Reporting system to create, submit, and store electronic versions of your certified payroll quickly and easily.</p>
-<form>
-  <fieldset>
-    <legend class="usa-drop_text">Sign in</legend>
-    <label for="username">Username or email address</label>
-    <input id="username" name="username" type="text" autocapitalize="off" autocorrect="off">
-    <label for="password">Password</label>
-    <input id="password" name="password" type="password">
-    <p class="usa-form-note">
-      <a title="Show password" href="#" class="usa-show_password" aria-controls="password">
-        Show password</a>
+<div class="login">
+  <p class="section">If you are a contractor working on federal construction projects, you can use this Certified Payroll Reporting system to create, submit, and store electronic versions of your certified payroll quickly and easily.</p>
+
+  <p class="section">
+    <a href="/ogp-payroll/dashboard" class="usa-button sign-in-google">
+      <span aria-hidden="true" data-icon="&#xf0d5;" class="fa"></span>
+      <span>Sign in with Google</span>
+    </a>
+    <a href="/ogp-payroll/dashboard" class="usa-button usa-button-outline sign-in-cloud-gov">
+      <span class="fa ico-cloud-gov" aria-hidden="true">&nbsp;&nbsp;</span>
+      <span>Sign in with CLOUD.GOV</span>
+    </a>
+  </p>
+
+  <div class="login-warning">
+    <p>
+      <strong>WARNING TO USERS OF THIS SYSTEM: </strong>
+      This system contains U.S. Government Data. Unauthorized use of this system is prohibited.
     </p>
-    <a class="usa-button button-long" href="{{ site.baseurl }}/dashboard/">Sign in</a>
-    <p><a href="#" title="Forgot username">
-      Forgot username?</a></p>
-    <p><a href="#" title="Forgot password">
-      Forgot password?</a></p>
-  </fieldset>
-</form>
+
+    <p>
+      This computer system, including all related equipment, networks, and network
+      devices (specifically including Internet access) are provided only for
+      authorized U.S. Government use. U.S. Government computer systems may
+      be monitored for all lawful purposes, including to ensure that their use is
+      authorized, for management of the system, to facilitate protection against
+      unauthorized access, and to verify security procedures, survivability, and
+      operational security. Monitoring includes active attacks by authorized U.S.
+      Government entities to test or verify the security of this system. During
+      monitoring, information may be examined, recorded, copied and used for
+      authorized purposes. All information, including personal information, placed
+      or sent over this system may be monitored.
+    </p>
+
+    <p>
+      Use of this computer system, authorized or unauthorized, constitutes consent
+      to monitoring of this system. Unauthorized use may subject you to criminal
+      prosecution. Evidence of unauthorized use collected during monitoring may be
+      used for administrative, criminal, or other adverse action. Use of this system
+      constitutes consent to monitoring for these purposes.
+    </p>
+
+    <p>
+      Use of this system implies understanding of these terms and conditions.
+    </p>
+  </div>
+</div>
