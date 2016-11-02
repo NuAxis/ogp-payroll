@@ -983,3 +983,132 @@ label[for="select-plans"] {
     border-color: $color-base transparent transparent transparent;
   }
 }
+.company-info-box {
+    background-color: #f1f1f1;
+    border: 1px solid;
+    position: relative;
+    padding: 3rem 2rem; 
+    margin-top: 15px;
+    border-radius: 5px;
+    width: 657px;
+    margin-left: 87px;
+}
+.company-info-box p {
+  padding: 8px 0px;
+  margin-left: 38px;
+}
+.company-info-entry {
+  position: absolute;
+  left: 260px;
+}
+/*.company-info-box p:first-child {
+    padding: 20px 0px 10px 0px;
+  }
+  .company-info-box:last-child {
+    padding: 10px 0px 20px 0px;
+  }*/
+.push-down {
+  padding-top: 20px;
+  margin-bottom: 5px;
+}
+.content-break {
+    border: 0;
+    height: 1px;
+    margin: 35px;
+    width: 996px;
+    background: #d6d7d9;
+}
+.contract-button {
+    width: 796px;
+    clear: both;
+    height: 55px;
+    border-radius: 5px;
+    line-height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a4a4a;
+    border-color: #4a4a4a;
+    border: 2px solid;
+}
+.contract-button:hover, .contract-button-active {
+    width: 796px;
+    height: 55px;
+    line-height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #4a4a4a;
+    border-color: #4a4a4a;
+    border: 2px solid;
+}
+.contract-name {
+    margin-right: 41px;
+    margin-left: 20.5px;
+}
+.contract-number {
+  margin-left: 41px;
+  margin-right: 20.5px;
+}
+.contract-content {
+  margin-left: 87px;
+  padding: 0;
+  margin-top:50px !important;
+  margin-bottom: 50px;
+}
+.hierarchy-table {
+  border: 0px;
+  margin-top: 0px;
+  box-sizing: border-box;
+  width:634px;
+}
+.hierarchy-table thead tr {
+  border: 1px solid;
+  border-color: #4a4a4a;  
+}
+.hierarchy-table thead tr td{
+  border: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 40px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #e1f3f8 !important;
+}
+.hierarchy-table tbody tr:nth-child(odd) td {
+   background-color: #fff !important;
+   border-collapse: collapse;
+   border:none;
+}
+.hierarchy-table tbody tr:nth-child(even) td {
+   background-color: #e4e2e0 !important;
+   border-collapse: collapse;
+   border:none;
+}
+.hierarchy-table tbody tr {
+  height: 40px;
+}
+.hierarchy-table tbody tr td {
+  height: 40px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.hierarchy-row-top td:first-child{
+   padding-left: 20px;
+}
+.hierarchy-row-sub td:first-child{
+   padding-left: 40px;
+}
+.hierarchy-row-sub-sub td:first-child{
+   padding-left: 60px;
+}
+
+.subheading {
+  padding: 0;
+  margin-bottom: 20px;
+}
+.page-title{
+  margin-bottom: 40px !important;
+}
+.le-bold {
+  font-weight: bold;
+}

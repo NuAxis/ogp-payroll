@@ -4,338 +4,83 @@ title: ACME Construction
 permalink: /profile/acme/
 ---
 
-  <h1>{{ page.title }}</h1>
+<h1 class="page-title">{{ page.title }}</h1>
 </div><!--closing div from default layout-->
 <div class="usa-grid">
   <div class="usa-width-one-half">
-    <aside>
-      <h4>Contact information <span><a href="#">Edit</a></span></h4>
-      <p><strong>Point of contact</strong> Eileen Gibson</p>
-      <p><strong>Phone</strong> (555)555-5555</p>
-      <p><strong>FAX</strong> (000)000-0000</p>
-      <p><strong>Email</strong> acme@acmeconstruction.com</p>
-      <p><strong>Address</strong> 230 S. Dearborn Ave., Chicago, IL 60604</p>
+    <h2 class="subheading">Contact information</h2>
+    <aside class="company-info-box">
+      <p><strong>Point of contact</strong><span class="company-info-entry">Eileen Gibson</span></p>
+      <p><strong>Phone</strong><span class="company-info-entry">(555) 555-5555</span></p>
+      <p><strong>Fax</strong><span class="company-info-entry">(000) 000-0000</span></p>
+      <p><strong>Email</strong><span class="company-info-entry">acme@acmeconstruction.com</span></p>
+      <p><strong>Address</strong><span class="company-info-entry">230 S. Dearborn Ave., Chicago, IL 60604</span></p>
     </aside>
   </div>
 </div>
+<hr class="content-break">
 <div class="usa-grid">
   <div class="usa-width-one-whole">
-    <h2>Contract ACE-CE-4125 (Anacostia River Bridge)</h2>
-  </div>
-</div>
-<div class="usa-grid">
-  <div class="usa-width-two-thirds">
-    <h4>Reporting hierarchy</h4>
-    <div class="usa-accordion accordion-prime hierarchies">
-      <ul class="usa-unstyled-list">
-        <li>
-          <button class="usa-button-unstyled" aria-expanded="true" aria-controls="collapsible-anacostia" aria-expanded="true">
-            <table class="usa-table-borderless table-no-padding">
-              <tr>
-                <th scope="row-prime">
-                  <strong><i class="fa fa-user" aria-hidden="false"></i>Prime contractor: ACME Construction</strong>
-                </th>
-              </tr>
-            </table>
-          </button>
-          <div id="collapsible-anacostia" aria-hidden="false" class="usa-accordion-content">
-            <table class="usa-table-borderless accordion-table-inner">
-              <thead>
-                <tr>
-                  <th scope="col">Subcontractor</th>
-                  <th scope="col">Start date</th>
-                  <th scope="col"></th>
-                </tr>
-              </thead>
-              <tr>
-                <th scope="row">
-                <a href="{{ site.baseurl }}/profile/sub/?great-lakes-building">Great Lakes Building Co., Inc.</a></a>
-                </th>
-                <td>April 1, 2016</td>
-                <td><a href="{{ site.baseurl }}/dashboard?contractor=acme-construction&contract=acece9274">View payrolls</a></td>
-              </tr>
+    <h2 class="subheading">Click a contract to view hierarchy and payrolls</h2>
+    <div class="contract-button"><span class="contract-number">Contract ACE-CE-4125</span><span class="contract-name">Anacostia River Bridge</span></div>
+    <div class="contract-content usa-width-two-thirds">
 
-              <tr>
-                <th scope="row">
-                <a href="{{ site.baseurl }}/profile/sub/?moore-and-sons-construction">Moore & Sons Construction</a>
-                </th>
-                <td>April 1, 2016</td>
-                <td><a href="{{ site.baseurl }}/dashboard?contractor=moore-and-sons-construction&contract=acece9274">View payrolls</a></td>
-              </tr>
+      <h2 class="subheading" >Reporting hierarchy</h2>
+        <table class="hierarchy-table">
+          <thead>
+            <tr>
+              <td>Contractors</td>
+              <td>Start Date</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hierarchy-row-top">
+              <td>Joe's plumbing</td>
+              <td>04/17/16</td>
+            </tr>
+            <tr class="hierarchy-row-sub le-bold">
+              <td>ACME Construction</td>
+              <td>04/17/16</td>
+            </tr>
+            <tr class="hierarchy-row-sub-sub">
+              <td>Joe's Shoes</td>
+              <td>04/17/16</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <h2 class="subheading">Payrolls</h2>
+        <table class="hierarchy-table">
+          <thead>
+            <tr>
+              <td>Payroll Number</td>
+              <td>Week Ending</td>
+              <td>Status</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#1</td>
+              <td>04/17/16</td>
+              <td>Awful</td>
+            </tr>
+            <tr>
+              <td>#2</td>
+              <td>04/17/16</td>
+              <td>Acceptable</td>
+            </tr>
+            <tr>
+              <td>#3</td>
+              <td>04/17/16</td>
+              <td>Abhorrent</td>
+            </tr>
+          </tbody>
+        </table>
 
-              <!-- Row sub BEGIN -->
-              <tr class="row-sub">
-                <th scope="row"><a href="{{ site.baseurl }}/profile/sub/?atlantic-northern">Atlantic Northern</a></th>
-                <td>April 1, 2016</td>
-                <td><a href="{{ site.baseurl }}/dashboard?contractor=cogswell-cogs&contract=acece9274">View payrolls</a></td>
-              </tr>
-              <tr class="row-sub">
-                <th scope="row">
-                  <i class="fa fa-plus" aria-hidden="false"></i><a href="{{ site.baseurl }}/profile/sub/?wernham-hogg">Werham Hogg</a>
-                </th>
-                <td>April 8, 2016</td>
-                <td><a href="{{ site.baseurl }}/dashboard?contractor=wernham-hogg&contract=acece9274">View payrolls</a></td>
-              </tr>
-              <tr class="row-sub">
-                <th scope="row"><a href="{{ site.baseurl }}/profile/sub/?dunder-mifflin">Dunder Mifflin</a></th>
-                <td>April 15, 2016</td>
-                <td><a href="{{ site.baseurl }}/dashboard?contractor=dunder-mifflin&contract=acece9274">View payrolls</a></td>
-              </tr>
-              <!-- Row sub END -->
-
-              <tr>
-                <th scope="row">
-                <a href="{{ site.baseurl }}/profile/sub/?vandelay-industries">Vandelay Industries</a>
-                </th>
-                <td>April 1, 2016</td>
-                <td><a href="{{ site.baseurl }}/dashboard?contractor=acme-construction&contract=acece9274">View payrolls</a></td>
-              </tr>
-              <tr>
-                <th scope="row">
-                <a href="{{ site.baseurl }}/profile/sub/?roof-doctor">Roof Doctor, Co.</a>
-                </th>
-                <td>April 1, 2016</td>
-                <td><a href="{{ site.baseurl }}/dashboard?contractor=acme-construction&contract=acece9274">View payrolls</a></td>
-              </tr>
-              <!-- Row sub BEGIN -->
-              <tr class="row-sub">
-                <th scope="row"><a href="{{ site.baseurl }}/profile/sub/?cogswell-cogs">Cogswell Cogs</a></th>
-                <td>April 1, 2016</td>
-                <td><a href="{{ site.baseurl }}/dashboard?contractor=cogswell-cogs&contract=acece9274">View payrolls</a></td>
-              </tr>
-              <tr class="row-sub">
-                <th scope="row">
-                  <i class="fa fa-plus" aria-hidden="false"></i><a href="{{ site.baseurl }}/profile/sub/?dunder-mifflin">Dunder Mifflin</a>
-                </th>
-                <td>April 8, 2016</td>
-                <td><a href="{{ site.baseurl }}/dashboard?contractor=wernham-hogg&contract=acece9274">View payrolls</a></td>
-              </tr>
-              <tr class="row-sub">
-                <th scope="row"><a href="{{ site.baseurl }}/profile/bedrock-quarry-and-gravel">Bedrock Quarry & Gravel</a></th>
-                <td>April 15, 2016</td>
-                <td><a href="{{ site.baseurl }}/dashboard?contractor=dunder-mifflin&contract=acece9274">View payrolls</a></td>
-              </tr>
-              <!-- Row sub END -->
-
-              <tr>
-                <th scope="row">
-                <a href="{{ site.baseurl }}/profile/sub/?diggedy-dozer">Diggedy Dozer</a>
-                </th>
-                <td>April 1, 2016</td>
-                <td><a href="{{ site.baseurl }}/dashboard?contractor=acme-construction&contract=acece9274">View payrolls</a></td>
-              </tr>
-
-            </table>
-          </li>
-        </ul>
+        <button>View All</button>
       </div>
-    </div>
-  </div>
-<div class="usa-grid">
-  <div class="usa-width-two-thirds">
-    <h4>Recent payrolls for ACME Construction</h4>
-    <table class="usa-table-borderless">
-      <thead>
-        <tr>
-          <th scope="col">Week end date</th>
-          <th scope="col">Payroll #</th>
-          <th scope="col">Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>April 1, 2016</td>
-          <td>21</td>
-          <td>
-            <i class="fa fa-times" aria-hidden="false"></i>
-            <span>Not received</span></td>
-        </tr>
-        <tr>
-          <td>March 25, 2016</td>
-          <td><a href="{{ site.baseurl }}/review-hours-and-earnings/">20</a></td>
-          <td>
-            <i class="fa fa-check" aria-hidden="false"></i>
-            <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
-          </td>
-        </tr>
-        <tr>
-          <td>March 18, 2016</td>
-          <td><a href="{{ site.baseurl }}/review-hours-and-earnings/">19</a></td>
-          <td>
-            <i class="fa fa-check" aria-hidden="false"></i>
-            <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
-          </td>
-        </tr>
-        <tr>
-          <td>March 11, 2016</td>
-          <td><a href="{{ site.baseurl }}/review-hours-and-earnings/">18</a></td>
-          <td>
-            <i class="fa fa-check" aria-hidden="false"></i>
-            <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
-          </td>
-        </tr>
-        <tr>
-          <td>March 4, 2016</td>
-          <td><a href="{{ site.baseurl }}/review-hours-and-earnings/">17</a></td>
-          <td>
-            <i class="fa fa-check" aria-hidden="false"></i>
-            <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
-          </td>
-        </tr>
-        <tr>
-          <td>Feb. 26, 2016</td>
-          <td><a href="{{ site.baseurl }}/review-hours-and-earnings/">16</a></td>
-          <td>
-            <i class="fa fa-check" aria-hidden="false"></i>
-            <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
-          </td>
-        </tr>
-        <tr>
-          <td>Feb. 19, 2016</td>
-          <td><a href="{{ site.baseurl }}/review-hours-and-earnings/">15</a></td>
-          <td>
-            <i class="fa fa-check" aria-hidden="false"></i>
-            <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <a class="usa-button" href="{{ site.baseurl }}/dashboard?contractor=acmeconstruction&contract=acece9274/">View all payrolls</a>
+      <div class="contract-button"><span class="contract-number">Contract ACE-CE-4156</span><span class="contract-name">Yacht Club</span></div>
   </div>
 </div>
 
-<div class="usa-grid">
-  <div class="usa-width-one-whole">
-    <h2>Contract ACE-CE-9274 (12-12 Cumberland County)</h2>
-  </div>
-</div>
-<div class="usa-grid">
-  <div class="usa-width-two-thirds">
-    <h4>Reporting hierarchy</h4>
-    <div class="usa-accordion accordion-prime hierarchies">
-      <ul class="usa-unstyled-list">
-        <li>
-          <button class="usa-button-unstyled" aria-expanded="true" aria-controls="collapsible-1">
-            <table class="usa-table-borderless table-no-padding">
-              <tr>
-                <th scope="row-prime">
-                  <strong>Prime contractor: <a href="{{ site.baseurl }}/profile/greatlakes/">Vandelay Industries</a></strong>
-                </th>
-              </tr>
-            </table>
-          </button>
-          <div id="collapsible-1" aria-hidden="false" class="usa-accordion-content">
-            <table class="usa-table-borderless accordion-table-inner">
-              <thead>
-                <tr>
-                  <th scope="col">Subcontractor</th>
-                  <th scope="col">Start date</th>
-                </tr>
-              </thead>
-              <tr>
-                <th scope="row">
-                  <i class="fa fa-user" aria-hidden="false"></i>
-                  ACME Construction (self)
-                </th>
-                <td>April 1, 2016</td>
-                <td><a href="{{ site.baseurl }}/dashboard?contractor=acmeconstruction&contract=acece9274">View payrolls</a></td>
-              </tr>
 
-              <!-- Row sub BEGIN -->
-              <tr class="row-sub">
-                <th scope="row"><a href="{{ site.baseurl }}/profile/greatlakes/">Cogswell Cogs</a></th>
-                <td>April 1, 2016</td>
-                <td><a href="{{ site.baseurl }}/dashboard?contractor=cogswellcogs&contract=acece9274">View payrolls</a></td>
-              </tr>
-              <tr class="row-sub">
-                <th scope="row">
-                  <i class="fa fa-plus" aria-hidden="false"></i><a href="{{ site.baseurl }}/profile/greatlakes/">Wernham Hogg</a>
-                </th>
-                <td>April 8, 2016</td>
-                <td><a href="{{ site.baseurl }}/dashboard?contractor=wernhamhogg&contract=acece9274">View payrolls</a></td>
-              </tr>
-              <tr class="row-sub">
-                <th scope="row"><a href="{{ site.baseurl }}/profile/greatlakes/">Dunder Mifflin</a></th>
-                <td>April 15, 2016</td>
-                <td><a href="{{ site.baseurl }}/dashboard?contractor=dundermifflin&contract=acece9274">View payrolls</a></td>
-              </tr>
-              <!-- Row sub END -->
-            </table>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-<div class="usa-grid">
-  <div class="usa-width-two-thirds">
-    <h4>Recent payrolls for ACME Construction</h4>
-    <table class="usa-table-borderless">
-      <thead>
-        <tr>
-          <th scope="col">Week end date</th>
-          <th scope="col">Payroll #</th>
-          <th scope="col">Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>April 1, 2016</td>
-          <td>21</td>
-          <td>
-            <i class="fa fa-times" aria-hidden="false"></i>
-            <span>Not received</span></td>
-        </tr>
-        <tr>
-          <td>March 25, 2016</td>
-          <td><a href="{{ site.baseurl }}/review-hours-and-earnings/">20</a></td>
-          <td>
-            <i class="fa fa-check" aria-hidden="false"></i>
-            <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
-          </td>
-        </tr>
-        <tr>
-          <td>March 18, 2016</td>
-          <td><a href="{{ site.baseurl }}/review-hours-and-earnings/">19</a></td>
-          <td>
-            <i class="fa fa-check" aria-hidden="false"></i>
-            <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
-          </td>
-        </tr>
-        <tr>
-          <td>March 11, 2016</td>
-          <td><a href="{{ site.baseurl }}/review-hours-and-earnings/">18</a></td>
-          <td>
-            <i class="fa fa-check" aria-hidden="false"></i>
-            <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
-          </td>
-        </tr>
-        <tr>
-          <td>March 4, 2016</td>
-          <td><a href="{{ site.baseurl }}/review-hours-and-earnings/">17</a></td>
-          <td>
-            <i class="fa fa-check" aria-hidden="false"></i>
-            <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
-          </td>
-        </tr>
-        <tr>
-          <td>Feb. 26, 2016</td>
-          <td><a href="{{ site.baseurl }}/review-hours-and-earnings/">16</a></td>
-          <td>
-            <i class="fa fa-check" aria-hidden="false"></i>
-            <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
-          </td>
-        </tr>
-        <tr>
-          <td>Feb. 19, 2016</td>
-          <td><a href="{{ site.baseurl }}/review-hours-and-earnings/">15</a></td>
-          <td>
-            <i class="fa fa-check" aria-hidden="false"></i>
-            <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <a class="usa-button" href="{{ site.baseurl }}/prime/dashboardcontractor=acmeconstruction&contract=acece9274/">View all payrolls</a>
-  </div>
-</div>
