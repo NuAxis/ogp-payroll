@@ -19,12 +19,35 @@ body {
   font-size: $base-font-size;
 }
 
+small {
+  font-size: 90%;
+}
+
 h1, h2, h3, h4, h5 {
   font-family: $font-sans;
 }
 
 h1 {
   color: $cpa-color-header-gray;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  .usa-button {
+    margin: 0;
+  }
+
+  th {
+   text-align: left;
+  }
+
+  td {
+    background-color: inherit;
+    border: none;
+  }
 }
 
 .welcome-text {
@@ -210,6 +233,11 @@ a.disabled {
   }
 }
 
+// Table ------------- //
+
+
+// Login ------------- //
+
 .login {
   padding-bottom: 2rem;
 
@@ -238,7 +266,7 @@ a.disabled {
   }
 
   .login-warning {
-    font-size: 1.3rem;
+    font-size: $small-font-size;
   }
 }
 
@@ -265,14 +293,14 @@ a.disabled {
   margin-left: 5em;
 }
 
-// darker ------------- //
+// site-footer ------------- //
 
 .site-footer {
   background-color: $color-primary-darkest;
   margin-top: 5rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  font-size: 1.3rem;
+  font-size: $small-font-size;
   color: $color-white;
 
   img {
@@ -291,20 +319,72 @@ a.disabled {
   }
 }
 
-// Login page ------------- //
+// Dashboard ------------- //
 
-.button-long {
-  margin-bottom: 1.5em;
-  margin-top: 2.5rem;
+.table-filter-grid {
+  margin-top: 40px;
+  margin-bottom: -10px;
 
-  @include media($medium-screen) {
-    padding-left: 2.7em;
-    padding-right: 2.7em;
-    width: auto;
+  @include media($large-screen) {
+    .table-filter {
+      background-color: $color-gray-warm-light;
+      color: $cpa-color-header-gray;
+      padding: 1.5rem 2rem;
+
+      .filter-title {
+        margin-right: 2rem;
+        display: inline-block;
+      }
+
+      .filter-group {
+        margin-left: 2rem;
+        display: inline-block;
+        font-size: $small-font-size;
+
+        input, select {
+          height: 3rem;
+          margin: 0 0;
+        }
+
+        input {
+          margin-left: 0.5rem;
+          display: inline-block;
+          padding: 1rem 1rem;
+          font-size: inherit;
+          max-width: 8.7rem;
+        }
+
+        select {
+          font-size: inherit;
+          padding: 0.5rem 1rem;
+          width: 155px;
+          min-width: 155px;
+        }
+
+        #contractor {
+          min-width: 205px;
+        }
+
+        &.attached {
+          margin-left: 0.5rem;
+          margin-right: 1rem;
+        }
+      }
+    }
   }
 }
 
-// Dashboard ------------- //
+.cpa-table {
+  thead tr {
+    border: 1px solid $color-gray-warm-dark;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  th {
+    background-color: $color-primary-alt-lightest;
+  }
+}
+
 
 h2 + .contract-payrolls {
   margin-top: 0;
@@ -324,15 +404,6 @@ h2 + .contract-payrolls {
 }
 
 // Fix for table alignment
-th {
- text-align: left;
-}
-
-table {
-  .usa-button {
-    margin: 0;
-  }
-}
 
 .standfirst {
   @include media($medium-screen) {
@@ -817,7 +888,7 @@ table input[type="checkbox"] + label {
 }
 
 .const-type button {
-  font-size: 1.3rem;
+  font-size: $small-font-size;
 }
 
 .search-results {
