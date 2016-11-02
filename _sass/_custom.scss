@@ -99,7 +99,7 @@ a.disabled {
     white-space: nowrap;
 
     @include media($nav-width) {
-      bottom: 3rem;
+      bottom: 3.2rem;
 
       .usa-logo-text {
         font-weight: 400;
@@ -124,7 +124,6 @@ a.disabled {
   clear: right;
 
   li.info-item {
-
     span {
       padding-left: 20px;
     }
@@ -146,40 +145,49 @@ a.disabled {
 @include media($nav-width) {
   .usa-nav {
     background: inherit;
-    padding-top: 4rem;
+    padding-top: 3.6rem;
+  }
 
-    .usa-nav-primary {
+  .usa-nav-primary {
+    color: $color-white;
+
+    & > li {
+      font-weight: normal;
+      font-size: 1.7rem;
+      color: $color-gray-lightest;
+    }
+
+    a.usa-nav-link {
+      display: inline-block;
+      color: $color-gray-lightest;
+      padding: 0;
+      margin-right: 25px;
+      font-size: 1.7rem;
+      font-weight: normal;
+    }
+
+    a:hover {
+      background-color: inherit;
+      text-decoration: underline;
+    }
+
+    a:active {
+      box-shadow: none;
+    }
+
+    a.active {
       color: $color-white;
+      font-weight: bold;
+    }
 
-      & > li {
-        font-weight: normal;
-        font-size: 1.7rem;
-        color: $color-gray-lightest;
-      }
-
-      a {
-        display: inline-block;
-        color: $color-gray-lightest;
+    li.info-item {
+      a.usa-nav-link {
         padding: 0;
-        margin-right: 25px;
-        font-size: 1.7rem;
-        font-weight: normal;
+        border: none;
       }
-
-      a:hover {
-        background-color: inherit;
-        text-decoration: underline;
+      span {
+        padding-left: 0;
       }
-
-      a:active {
-        box-shadow: none;
-      }
-
-      a.active {
-        color: $color-white;
-        font-weight: bold;
-      }
-
       a.username {
         margin-right: 0;
       }
