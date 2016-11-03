@@ -276,7 +276,7 @@ a.disabled {
 
   .sign-in-cloud-gov {
     .ico-cloud-gov {
-      background: url(../img/cloud_gov.png) no-repeat right 1px;
+      background: url(../img/cloud_gov.png) no-repeat;
       background-size: 16px 16px;
     }
 
@@ -989,14 +989,7 @@ label[for="select-plans"] {
     border-style: solid;
     border-color: $color-base transparent transparent transparent;
   }
-
-
-
-
-
 }
-
-
 
 #breadcrumbs{
   overflow: hidden;
