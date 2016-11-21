@@ -995,6 +995,7 @@ label[for="select-plans"] {
 #breadcrumbs {
   overflow: hidden;
   width: 100%;
+  padding: 0px;
 }
 
 #breadcrumbs a {
@@ -1011,10 +1012,9 @@ label[for="select-plans"] {
   color: #444;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   position: relative;
-  width: 175px;
+  width: 170px;
   text-align: center;
   font-size: 13px;
-  width: auto;
 }
 
 #breadcrumbs li::before {
