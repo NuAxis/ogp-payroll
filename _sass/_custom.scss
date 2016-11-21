@@ -991,70 +991,22 @@ label[for="select-plans"] {
   }
 }
 
-#breadcrumbs{
+
+#breadcrumbs {
   overflow: hidden;
   width: 100%;
 }
 
-#breadcrumbs li{
-  float: left;
-  margin: 0 .5em 0 1em;
+#breadcrumbs a {
+  color: inherit;
 }
 
-#breadcrumbs a{
+#breadcrumbs li {
+  float: left;
+  margin: 0 1em 5em 1em;
+  list-style-type: none;
   background: #ddd;
   padding: .7em 1em;
-  float: left;
-  text-decoration: none;
-  color: #444;
-  text-shadow: 0 1px 0 rgba(255,255,255,.5);
-  position: relative;
-  width:175px;
-  text-align:center;
-  font-size: 13px;
-  width: auto;
-  margin-bottom: 5em;
-}
-
-#breadcrumbs a:hover{
-  // background: #99db76;
-}
-
-#breadcrumbs a::before{
-  content: "";
-  position: absolute;
-  top: 50%;
-  margin-top: -1.5em;
-  border-width: 1.5em 0 1.5em 1em;
-  border-style: solid;
-  border-color: #ddd #ddd #ddd transparent;
-  left: -1em;
-}
-
-#breadcrumbs a:hover::before{
-  // border-color: #99db76 #99db76 #99db76 transparent;
-}
-
-#breadcrumbs a::after{
-  content: "";
-  position: absolute;
-  top: 50%;
-  margin-top: -1.5em;
-  border-top: 1.5em solid transparent;
-  border-bottom: 1.5em solid transparent;
-  border-left: 1em solid #ddd;
-  right: -1em;
-}
-
-#breadcrumbs a:hover::after{
-  // border-left-color: #99db76;
-}
-
-/* start completed*/
-#breadcrumbs li.completed a {
-  background: #E7F4E4;
-  padding: .7em 1em;
-  float: left;
   text-decoration: none;
   color: #444;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
@@ -1063,112 +1015,72 @@ label[for="select-plans"] {
   text-align: center;
   font-size: 13px;
   width: auto;
-  margin-bottom: 5em; }
+}
 
-#breadcrumbs li.completed a::before {
+#breadcrumbs li::before {
   content: "";
   position: absolute;
   top: 50%;
   margin-top: -1.5em;
   border-width: 1.5em 0 1.5em 1em;
   border-style: solid;
-  border-color: #E7F4E4 #E7F4E4 #E7F4E4 transparent;
+  border-color: #ddd #ddd #ddd transparent;
   left: -1em; }
 
-#breadcrumbs li.completed a::after {
+#breadcrumbs li::after {
   content: "";
   position: absolute;
   top: 50%;
   margin-top: -1.5em;
   border-top: 1.5em solid transparent;
   border-bottom: 1.5em solid transparent;
-  border-left: 1em solid #E7F4E4;
+  border-left: 1em solid #ddd;
   right: -1em; }
+
+/* start completed*/
+#breadcrumbs li.completed {
+  background: #E7F4E4;
+}
+
+#breadcrumbs li.completed::before {
+  border-color: #E7F4E4 #E7F4E4 #E7F4E4 transparent;
+}
+
+#breadcrumbs li.completed::after {
+  border-left: 1em solid #E7F4E4;
+}
 /* end completed*/
 
 /* start current*/
-#breadcrumbs li.current a {
+#breadcrumbs li.current {
   font-weight: bold;
   background: #ddd;
-  padding: .7em 1em;
-  float: left;
-  text-decoration: none;
   color: #444;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  position: relative;
-  width: 175px;
-  text-align: center;
-  font-size: 13px;
-  width: auto;
-  margin-bottom: 5em; }
+}
 
-#breadcrumbs li.current a::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  margin-top: -1.5em;
-  border-width: 1.5em 0 1.5em 1em;
-  border-style: solid;
+#breadcrumbs li.current::before {
   border-color: #ddd #ddd #ddd transparent;
-  left: -1em; }
+}
 
-#breadcrumbs li.current a::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  margin-top: -1.5em;
-  border-top: 1.5em solid transparent;
-  border-bottom: 1.5em solid transparent;
+#breadcrumbs li.current::after {
   border-left: 1em solid #ddd;
-  right: -1em; }
+}
 /* end current*/
 
 /* start disabled*/
-#breadcrumbs li.disabled a {
+#breadcrumbs li.disabled {
   background: #f2f2f2;
-  padding: .7em 1em;
-  float: left;
-  text-decoration: none;
   color: #9b9b9b;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  position: relative;
-  width: 175px;
-  text-align: center;
-  font-size: 13px;
-  width: auto;
-  margin-bottom: 5em; }
+}
 
-#breadcrumbs li.disabled a::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  margin-top: -1.5em;
-  border-width: 1.5em 0 1.5em 1em;
-  border-style: solid;
+#breadcrumbs li.disabled::before {
   border-color: #f2f2f2 #f2f2f2 #f2f2f2 transparent;
-  left: -1em; }
+}
 
-#breadcrumbs li.disabled a::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  margin-top: -1.5em;
-  border-top: 1.5em solid transparent;
-  border-bottom: 1.5em solid transparent;
+#breadcrumbs li.disabled::after {
   border-left: 1em solid #f2f2f2;
-  right: -1em; }
-/* end disabled*/
-
-
-#breadcrumbs .current::after,
-#breadcrumbs .current::before{
-  content: normal;
 }
 
-#breadcrumbs li::before
-{
-  content: "";
-}
 .company-info-box {
     background-color: #f1f1f1;
     border: 1px solid;
