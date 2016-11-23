@@ -996,6 +996,7 @@ label[for="select-plans"] {
   overflow: hidden;
   width: 100%;
   padding: 0px;
+  margin: 0px;
 }
 
 #breadcrumbs a {
@@ -1004,7 +1005,7 @@ label[for="select-plans"] {
 
 #breadcrumbs li {
   float: left;
-  margin: 0 1em 5em 1em;
+  margin: 0 1em 0em 1em;
   list-style-type: none;
   background: #ddd;
   padding: .7em 1em;
@@ -1039,38 +1040,38 @@ label[for="select-plans"] {
 
 /* start completed*/
 #breadcrumbs li.completed {
-  background: #E7F4E4;
+  background: #d9e8d5;
 }
 
 #breadcrumbs li.completed::before {
-  border-color: #E7F4E4 #E7F4E4 #E7F4E4 transparent;
+  border-color: #d9e8d5 #d9e8d5 #d9e8d5 transparent;
 }
 
 #breadcrumbs li.completed::after {
-  border-left: 1em solid #E7F4E4;
+  border-left: 1em solid #d9e8d5;
 }
 /* end completed*/
 
 /* start current*/
 #breadcrumbs li.current {
   font-weight: bold;
-  background: #ddd;
+  background: #d1d1d1;
   color: #444;
 }
 
 #breadcrumbs li.current::before {
-  border-color: #ddd #ddd #ddd transparent;
+  border-color: #d1d1d1 #d1d1d1 #d1d1d1 transparent;
 }
 
 #breadcrumbs li.current::after {
-  border-left: 1em solid #ddd;
+  border-left: 1em solid #d1d1d1;
 }
 /* end current*/
 
 /* start disabled*/
 #breadcrumbs li.disabled {
   background: #f2f2f2;
-  color: #9b9b9b;
+  color: #444;
 }
 
 #breadcrumbs li.disabled::before {
