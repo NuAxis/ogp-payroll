@@ -1005,13 +1005,12 @@ label[for="select-plans"] {
 
 #breadcrumbs li {
   float: left;
-  margin: 0 1em 0em 1em;
+  margin: 0 1em 1em 1em;
   list-style-type: none;
   background: #ddd;
   padding: .7em 1em;
   text-decoration: none;
   color: #444;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   position: relative;
   width: 170px;
   text-align: center;
@@ -1023,10 +1022,11 @@ label[for="select-plans"] {
   position: absolute;
   top: 50%;
   margin-top: -1.5em;
-  border-width: 1.5em 0 1.5em 1em;
+  border-width: 1.5em 0 1.5em 1.08em;
   border-style: solid;
   border-color: #ddd #ddd #ddd transparent;
-  left: -1em; }
+  left: -1em;
+}
 
 #breadcrumbs li::after {
   content: "";
@@ -1036,7 +1036,9 @@ label[for="select-plans"] {
   border-top: 1.5em solid transparent;
   border-bottom: 1.5em solid transparent;
   border-left: 1em solid #ddd;
-  right: -1em; }
+  right: -.95em;
+}
+
 
 /* start completed*/
 #breadcrumbs li.completed {
@@ -1054,17 +1056,16 @@ label[for="select-plans"] {
 
 /* start current*/
 #breadcrumbs li.current {
-  font-weight: bold;
-  background: #d1d1d1;
-  color: #444;
+  background: #4a4a4a;
+  color: #fff;
 }
 
 #breadcrumbs li.current::before {
-  border-color: #d1d1d1 #d1d1d1 #d1d1d1 transparent;
+  border-color: #4a4a4a #4a4a4a #4a4a4a transparent;
 }
 
 #breadcrumbs li.current::after {
-  border-left: 1em solid #d1d1d1;
+  border-left: 1em solid #4a4a4a;
 }
 /* end current*/
 
