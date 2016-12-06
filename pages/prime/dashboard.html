@@ -5,25 +5,27 @@ permalink: /dashboard/
 ---
 
   <h1>Dashboard</h1>
-  <p><a class="usa-button" href="{{ site.baseurl }}/add-new-payroll/">Create new payroll record</a>
-  <br>
-No work done this week? You'll still need to file a no-work payroll.</p>
+  <p>
+    <a class="usa-button" href="{{ site.baseurl }}/add-new-payroll/">Create new payroll record</a>
+    <br>
+    <span class="usa-text-small">No work done this week? You'll still need to file a no-work payroll.</span>
+  </p>
 </div><!--closing div from template-->
 
 <div class="usa-grid table-filter-grid">
   <div class="table-filter">
-    <div class="filter-title"><strong>Filter</em></strong>
+    <div class="filter-title"><strong>FILTER</strong></div>
     <div class="filter-group">
-      <span>Date rage:</span>
-      <input type="text" aria-label="date range" placeholder="MM/DD/YY">
+      <span>Date range:</span>
+      <input type="text" aria-label="date range from" placeholder="MM/DD/YY">
     </div>
     <div class="filter-group attached">
       <span>to</span>
-      <input type="text" aria-label="to" placeholder="MM/DD/YY">
+      <input type="text" aria-label="date range to" placeholder="MM/DD/YY">
     </div>
     <div class="filter-group">
-      <select name="status" id="status" aria-label="status">
-        <option value="actionable">Actionable statuses</option>
+      <select name="status" id="status" aria-label="payroll status">
+        <option value="actionable" selected="selected">Actionable statuses</option>
         <option value="all">All statuses</option>
         <option value="sent">Sent</option>
         <option value="received">Received</option>
@@ -56,37 +58,37 @@ No work done this week? You'll still need to file a no-work payroll.</p>
 <div class="usa-grid">
   <div class="usa-width-one-whole">
     <div id="payrolls">
-    <table summary="payroll list" class="usa-table-borderless zebra cpa-table">
+    <table summary="payroll list" class="usa-table-borderless  cpa-table">
       <caption>&nbsp;</caption>
       <thead>
         <tr>
           <th scope="col">
             <a href="#" class="sort" data-sort="weekend">
-              <strong class="fa fa-sort" aria-hidden="false"></strong>
+              <span class="fa fa-sort" aria-hidden="false"></span>
               Week end date
             </a>
           </th>
           <th scope="col">
             <a href="#" class="sort" data-sort="contract-number">
-              <strong class="fa fa-sort" aria-hidden="false"></strong>
+              <span class="fa fa-sort" aria-hidden="false"></span>
               Contract
             </a>
           </th>
           <th scope="col">
             <a href="#" class="sort" data-sort="contractor">
-              <strong class="fa fa-sort" aria-hidden="false"></strong>
+              <span class="fa fa-sort" aria-hidden="false"></span>
               Contractor
             </a>
             </th>
           <th scope="col">
             <a href="#" class="sort" data-sort="payroll-number">
-              <strong class="fa fa-sort" aria-hidden="false"></strong>
+              <span class="fa fa-sort" aria-hidden="false"></span>
               Payroll #
             </a>
           </th>
           <th scope="col">
             <a href="#" class="sort" data-sort="status">
-              <strong class="fa fa-sort" aria-hidden="false"></strong>
+              <span class="fa fa-sort" aria-hidden="false"></span>
               Status
             </a>
           </th>
@@ -100,7 +102,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="contractor"><a href="{{ site.baseurl }}/profile/acme/">ACME Construction</a></td>
           <td class="payroll-number">21</td>
           <td class="status">
-            <strong class="fa fa-check" aria-hidden="false"></strong>
+            <span class="fa fa-check" aria-hidden="false"></span>
             <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
@@ -110,7 +112,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?great-lakes-building">Great Lakes Building</a></td>
           <td class="payroll-number">12</td>
           <td class="status">
-                <strong class="fa fa-times" aria-hidden="false"></strong>
+                <span class="fa fa-times" aria-hidden="false"></span>
                 <span>Delinquent</span>
           </td>
           <td></td>
@@ -121,7 +123,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?moore-and-sons-construction">Moore & Sons Construction</a></td>
           <td class="payroll-number">18</td>
           <td class="status">
-            <strong class="fa fa-check" aria-hidden="false"></strong>
+            <span class="fa fa-check" aria-hidden="false"></span>
             <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
@@ -131,7 +133,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?atlantic-northern">Atlantic Northern</a></td>
           <td class="payroll-number">1</td>
           <td class="status">
-            <strong class="fa fa-check" aria-hidden="false"></strong>
+            <span class="fa fa-check" aria-hidden="false"></span>
             <strong><a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Ready to send</a></strong>
             <span class="usa-label status-new">New</span>
           </td>
@@ -146,7 +148,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?vandelay-industries">Vandelay Industries</a></td>
           <td class="payroll-number">1</td>
           <td class="status">
-            <strong class="fa fa-check" aria-hidden="false"></strong>
+            <span class="fa fa-check" aria-hidden="false"></span>
             <strong><a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Ready to send</a></strong>
             <span class="usa-label status-new">New</span>
           </td>
@@ -161,7 +163,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?roof-doctor">Roof Doctor</a></td>
           <td class="payroll-number">6</td>
           <td class="status">
-            <strong class="fa fa-check" aria-hidden="false"></strong>
+            <span class="fa fa-check" aria-hidden="false"></span>
             <strong><a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Ready to send</a></strong></td>
           <td>
             <input id="select-03" type="checkbox" name="select" value="select-03">
@@ -174,7 +176,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?roof-doctor">Roof Doctor</a></td>
           <td class="payroll-number">5</td>
           <td class="status">
-            <strong class="fa fa-check" aria-hidden="false"></strong>
+            <span class="fa fa-check" aria-hidden="false"></span>
             <strong><a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Ready to send</a></strong>
           </td>
           <td>
@@ -190,7 +192,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="status">
             <div class="tooltip">
               <span class="tooltiptext"><strong>System flag</strong>: the hourly rate for carpenter doesn't match what's in the contract</span>
-              <strong class="fa fa-flag" aria-hidden="false"></strong>
+              <span class="fa fa-flag" aria-hidden="false"></span>
               <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Flagged</a></td>
             </div>
           </td>
@@ -208,7 +210,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="status">
             <div class="tooltip">
               <span class="tooltiptext"><strong>My comment</strong>: double-check whether we have documentation for an apprentice program</span>
-              <strong class="fa fa-flag" aria-hidden="false"></strong>
+              <span class="fa fa-flag" aria-hidden="false"></span>
               <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Flagged</a></td>
             </div>
           </td>
@@ -224,7 +226,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?moore-and-sons-construction">Moore and Sons Construction</a></td>
           <td class="payroll-number">17</td>
           <td class="status">
-            <strong class="fa fa-check" aria-hidden="false"></strong>
+            <span class="fa fa-check" aria-hidden="false"></span>
             <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
@@ -236,7 +238,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="status">
             <div class="tooltip">
               <span class="tooltiptext"><strong>Contracting officer comment</strong>: I've found a problem, I'm sending it back to you to fix</span>
-              <strong class="fa fa-flag" aria-hidden="false"></strong>
+              <span class="fa fa-flag" aria-hidden="false"></span>
               <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Flagged</a></td>
             </div>
           </td>
@@ -248,7 +250,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?great-lakes-building">Great Lakes Building</a></td>
           <td class="payroll-number">11</td>
           <td class="status">
-            <strong class="fa fa-times" aria-hidden="false"></strong>
+            <span class="fa fa-times" aria-hidden="false"></span>
             <span>Delinquent</span>
           </td>
           <td></td>
@@ -259,7 +261,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?roof-doctor">Roof Doctor</a></td>
           <td class="payroll-number">4</td>
           <td class="status">
-            <strong class="fa fa-check" aria-hidden="false"></strong>
+            <span class="fa fa-check" aria-hidden="false"></span>
             <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
@@ -269,7 +271,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?moore-and-sons-construction">Moore and Sons Construction</a></td>
           <td class="payroll-number">16</td>
           <td class="status">
-            <strong class="fa fa-check" aria-hidden="false"></strong>
+            <span class="fa fa-check" aria-hidden="false"></span>
             <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
@@ -279,7 +281,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?diggedy-dozer">Diggedy Dozer</a></td>
           <td class="payroll-number">19</td>
           <td class="status">
-            <strong class="fa fa-check" aria-hidden="false"></strong>
+            <span class="fa fa-check" aria-hidden="false"></span>
             <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
@@ -289,7 +291,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="contractor"><a href="{{ site.baseurl }}/profile/acme/">ACME Construction</a></td>
           <td class="payroll-number">19</td>
           <td class="status">
-            <strong class="fa fa-check" aria-hidden="false"></strong>
+            <span class="fa fa-check" aria-hidden="false"></span>
             <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
@@ -299,7 +301,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?roof-doctor">Roof Doctor</a></td>
           <td class="payroll-number">3</td>
           <td class="status">
-            <strong class="fa fa-check" aria-hidden="false"></strong>
+            <span class="fa fa-check" aria-hidden="false"></span>
             <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
@@ -309,7 +311,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?moore-and-sons-construction">Moore and Sons Construction</a></td>
           <td class="payroll-number">15</td>
           <td class="status">
-            <strong class="fa fa-times" aria-hidden="false"></strong>
+            <span class="fa fa-times" aria-hidden="false"></span>
             <span>Delinquent</span>
           </td>
           <td></td>
@@ -320,7 +322,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?diggedy-dozer">Diggedy Dozer</a></td>
           <td class="payroll-number">18</td>
           <td class="status">
-            <strong class="fa fa-check" aria-hidden="false"></strong>
+            <span class="fa fa-check" aria-hidden="false"></span>
             <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
@@ -330,7 +332,7 @@ No work done this week? You'll still need to file a no-work payroll.</p>
           <td class="contractor"><a href="{{ site.baseurl }}/profile/acme">ACME Construction</a></td>
           <td class="payroll-number">18</td>
           <td class="status">
-            <strong class="fa fa-check" aria-hidden="false"></strong>
+            <span class="fa fa-check" aria-hidden="false"></span>
             <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>

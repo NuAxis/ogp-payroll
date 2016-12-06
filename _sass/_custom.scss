@@ -10,10 +10,6 @@ body {
   flex-direction: column;
 }
 
-small {
-  font-size: 90%;
-}
-
 h1, h2, h3, h4, h5 {
   font-family: $font-sans;
 }
@@ -25,7 +21,7 @@ h1 {
 
 a {
   text-decoration: none;
-  color:#4C2C92;
+  //color:#4C2C92;
 }
 
 table {
@@ -141,134 +137,13 @@ a.disabled {
   content: attr(data-icon);
 }
 
-// Navigation ------------- //
-
-
-.site-header {
-  background-color: $color-primary-darkest;
-  top: 0;
-  left: 0;
-  border-bottom: none;
-  box-shadow: 0 4px 4px $color-gray;
-
-  .usa-banner-inner {
-    margin-left: 0;
-  }
-
-  .usa-nav-container {
-    max-width: 100%;
-  }
-
-  .usa-logo {
-    white-space: nowrap;
-
-    @include media($nav-width) {
-      bottom: 3.2rem;
-
-      .usa-logo-text {
-        font-weight: 400;
-        font-size: 2.1rem;
-      }
-    }
-
-    a {
-      color: $color-white;
-    }
-  }
-}
-
-.usa-navbar {
-  border-bottom: none;
-  @include media($nav-width) {
-    height: 9.3rem;
-  }
-}
-
-.usa-nav-primary {
-  clear: right;
-
-  li.info-item {
-    span {
-      padding-left: 20px;
-    }
-
-    a.usa-nav-link {
-      padding-bottom: 10px;
-      border-top: 1px solid $color-gray;
-    }
-
-    a.username {
-        display: inline-block;
-        margin: 0;
-        padding: 9px;
-        border-top: none;
-    }
-  }
-}
-
-@include media($nav-width) {
-  .usa-nav {
-    background: inherit;
-    padding-top: 3.6rem;
-  }
-
-  .usa-nav-primary {
-    color: $color-white;
-
-    & > li {
-      font-weight: normal;
-      font-size: 1.7rem;
-      color: $color-gray-lightest;
-    }
-
-    a.usa-nav-link {
-      display: inline-block;
-      color: $color-gray-lightest;
-      padding: 0;
-      margin-right: 25px;
-      font-size: 1.7rem;
-      font-weight: normal;
-    }
-
-    a:hover {
-      background-color: inherit;
-      text-decoration: underline;
-    }
-
-    a:active {
-      box-shadow: none;
-    }
-
-    a.active {
-      color: $color-white;
-      font-weight: bold;
-    }
-
-    li.info-item {
-      a.usa-nav-link {
-        padding: 0;
-        border: none;
-      }
-      span {
-        padding-left: 0;
-      }
-      a.username {
-        margin-right: 0;
-      }
-    }
-  }
-}
-
-// Table ------------- //
-
-
 // Login ------------- //
 
 .login {
   padding-bottom: 2rem;
 
   .sign-in-google {
-    background-color: #d54331;
+    background-color: #d44230;
 
     &:hover {
       background-color: #cb3927;
@@ -286,9 +161,20 @@ a.disabled {
     }
   }
 
-  p.section {
+  .section {
     margin-top: 4rem;
     margin-bottom: 4rem;
+  }
+
+  ul.login-options {
+    list-style-type: none;
+    padding-left: 0;
+
+    @include media($medium-screen) {
+      li {
+        display: inline-block;
+      }
+    }
   }
 
   .login-warning {
@@ -358,16 +244,21 @@ a.disabled {
     color: $color-gray-dark;
     padding: 1.5rem 2rem;
     min-width: 980px;
+    display: inline-block;
+    width: 100%;
 
     .filter-title {
       margin-right: 2rem;
       display: inline-block;
+      float: left;
+      padding-top: 5px;
     }
 
     .filter-group {
       margin-left: 2rem;
       display: inline-block;
       font-size: $small-font-size;
+      float: left;
 
       input, select {
         height: 3rem;
@@ -403,22 +294,38 @@ a.disabled {
 
 .cpa-table {
   width: 100%;
+  margin-bottom: 6rem;
   min-width: $nav-width;
+  border-collapse: separate;
 
   thead tr {
-    border: 1px solid $color-gray-warm-dark;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-
     th {
       background-color: $color-primary-alt-lightest;
+      border-bottom: 1px solid $color-gray-warm-dark;
+      border-top: 1px solid $color-gray-warm-dark;
+
       a, a:hover, a:active {
         color: $color-gray-dark;
       }
     }
+
+    th:first-child {
+      border-left: 1px solid $color-gray-warm-dark;
+      border-top-left-radius: 3px;
+    }
+
+    th:last-child {
+      border-right: 1px solid $color-gray-warm-dark;
+      border-top-right-radius: 3px;
+    }
   }
-  caption {
-    display: none;
+
+  tbody tr th, tbody tr td {
+    vertical-align: top;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
   }
 }
 
@@ -576,7 +483,7 @@ td input[type="checkbox"] + label {
 }
 
 .fa-times {
-  color: $color-secondary;
+  color: $color-secondary-dark;
 }
 
 .fa-flag {
@@ -589,7 +496,7 @@ td input[type="checkbox"] + label {
   }
   &.fa-times + span {
     font-weight: bold;
-    color: $color-secondary;
+    color: $color-secondary-dark;
   }
 }
 
@@ -901,7 +808,7 @@ table input[type="checkbox"] + label {
 
 .review-hours-and-earnings {
   .usa-grid {
-    max-width: 100%;
+    max-width: 1280px;;
   }
 }
 
@@ -937,24 +844,6 @@ label[for="select-plans"] {
   ul {
     width: 100%;
   }
-}
-
-// profile page
-.contract {
-  background: #f1f1f1;
-  padding: 4rem 6rem;
-
-  h3 {
-    margin-top: 0;
-  }
-
-  ul {
-    margin: 10px 0 0 0;
-  }
-}
-
-.sub-name {
-  text-transform: capitalize;
 }
 
 // Custom tooltip styles -------------- //
@@ -996,98 +885,6 @@ label[for="select-plans"] {
     border-style: solid;
     border-color: $color-base transparent transparent transparent;
   }
-}
-
-
-#breadcrumbs {
-  overflow: hidden;
-  width: 100%;
-  padding: 0px;
-  margin: 0px;
-}
-
-#breadcrumbs a {
-  color: inherit;
-}
-
-#breadcrumbs li {
-  float: left;
-  margin: 0 1em 1em 1em;
-  list-style-type: none;
-  background: #ddd;
-  padding: .7em 1em;
-  text-decoration: none;
-  color: #444;
-  position: relative;
-  width: 170px;
-  text-align: center;
-  font-size: 13px;
-}
-
-#breadcrumbs li::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  margin-top: -1.5em;
-  border-width: 1.5em 0 1.5em 1.08em;
-  border-style: solid;
-  border-color: #ddd #ddd #ddd transparent;
-  left: -1em;
-}
-
-#breadcrumbs li::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  margin-top: -1.5em;
-  border-top: 1.5em solid transparent;
-  border-bottom: 1.5em solid transparent;
-  border-left: 1em solid #ddd;
-  right: -.95em;
-}
-
-
-/* start completed*/
-#breadcrumbs li.completed {
-  background: #d9e8d5;
-}
-
-#breadcrumbs li.completed::before {
-  border-color: #d9e8d5 #d9e8d5 #d9e8d5 transparent;
-}
-
-#breadcrumbs li.completed::after {
-  border-left: 1em solid #d9e8d5;
-}
-/* end completed*/
-
-/* start current*/
-#breadcrumbs li.current {
-  background: #4a4a4a;
-  color: #fff;
-}
-
-#breadcrumbs li.current::before {
-  border-color: #4a4a4a #4a4a4a #4a4a4a transparent;
-}
-
-#breadcrumbs li.current::after {
-  border-left: 1em solid #4a4a4a;
-}
-/* end current*/
-
-/* start disabled*/
-#breadcrumbs li.disabled {
-  background: #f2f2f2;
-  color: #444;
-}
-
-#breadcrumbs li.disabled::before {
-  border-color: #f2f2f2 #f2f2f2 #f2f2f2 transparent;
-}
-
-#breadcrumbs li.disabled::after {
-  border-left: 1em solid #f2f2f2;
 }
 
 .company-info-box {
@@ -1226,60 +1023,6 @@ label[for="select-plans"] {
   label{
     max-width: 100% ! important;
   }
-
-  .table-filter-grid {
-    margin-top: 40px;
-    margin-bottom: -10px;
-
-    .table-filter {
-      background-color: $color-gray-warm-light;
-      color: $color-gray-dark;
-      padding: 1.5rem 2rem;
-      min-width: 980px;
-
-      .filter-title {
-        margin-right: 2rem;
-        display: inline-block;
-      }
-
-      .filter-group {
-        margin-left: 2rem;
-        display: inline-block;
-        font-size: $small-font-size;
-
-        input, select {
-          height: 3rem;
-          margin: 0 0;
-        }
-
-        input {
-          margin-left: 0.5rem;
-          display: inline-block;
-          padding: 1rem 1rem;
-          font-size: inherit;
-          max-width: 8.7rem;
-        }
-
-        select {
-          font-size: inherit;
-          padding: 0.5rem 1rem;
-          width: 155px;
-          min-width: 155px;
-        }
-
-        #contractor {
-          min-width: 205px;
-        }
-
-        &.attached {
-          margin-left: 0.5rem;
-          margin-right: 1rem;
-        }
-      }
-    }
-  }
-
-
 }
 
 .profile-view
