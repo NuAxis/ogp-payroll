@@ -25,6 +25,7 @@ h1 {
 
 a {
   text-decoration: none;
+  color:#4C2C92;
 }
 
 table {
@@ -411,7 +412,13 @@ a.disabled {
 
     th {
       background-color: $color-primary-alt-lightest;
+      a, a:hover, a:active {
+        color: $color-gray-dark;
+      }
     }
+  }
+  caption {
+    display: none;
   }
 }
 
@@ -859,7 +866,7 @@ div > aside {
   p {
     margin: 2rem;
   }
-  h4 {
+  h4, h1, h2 {
     text-align: center;
     font-size: $aside-font-size;
     background: #f1f1f1;

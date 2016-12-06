@@ -18,12 +18,12 @@ permalink: /edit-employee-details/
     <select name="employee" id="work-classification">
     </select>
     <div id="rates-fringes" class="slide-down-content">
-      <p>Davis-Bacon rate: <span class="text-emphasize" id="rate"></span></p>
+      <p>Davis-Bacon rate: <span class="text-emphasize" id="rate_fringe"></span></p>
       <p>Fringes: <span class="text-emphasize" id="fringes"></span></p>
     </div>
     <div class="optional-info">
       <label for="custom-classification" class="slide-down-handler">
-        <a class="add-link" id="add-classification">+ Add custom work classification</a>
+        <a class="add-link" href="#">+ Add custom work classification</a>
       </label>
       <div class="slide-down-content">
         <input id="custom-classification" name="input-type-text" type="text">
@@ -48,31 +48,31 @@ permalink: /edit-employee-details/
     <div class="form_group-rate">
       <div class="form_group-rate-item">
         <label for="day_sunday">Sun.</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="0">
+        <input aria-describedby="dobHint" class="usa-form-control" id="straight_day_sunday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="0">
       </div>
       <div class="form_group-rate-item">
         <label for="day_sunday">Mon.</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="8">
+        <input aria-describedby="dobHint" class="usa-form-control" id="straight_day_monday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="8">
       </div>
       <div class="form_group-rate-item">
         <label for="day_sunday">Tue.</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="8">
+        <input aria-describedby="dobHint" class="usa-form-control" id="straight_day_tuesday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="8">
       </div>
       <div class="form_group-rate-item">
         <label for="day_sunday">Wed.</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="8">
+        <input aria-describedby="dobHint" class="usa-form-control" id="straight_day_wednesday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="8">
       </div>
       <div class="form_group-rate-item">
         <label for="day_sunday">Thu.</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="8">
+        <input aria-describedby="dobHint" class="usa-form-control" id="straight_day_thursday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="8">
       </div>
       <div class="form_group-rate-item">
         <label for="day_sunday">Fri.</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="8">
+        <input aria-describedby="dobHint" class="usa-form-control" id="straight_day_friday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="8">
       </div>
       <div class="form_group-rate-item">
         <label for="day_sunday">Sat.</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="0">
+        <input aria-describedby="dobHint" class="usa-form-control" id="straight_day_saturday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="0">
       </div>
       <div class="form_group-rate-item form_group-rate-total">
         <label class="label-straight" for="day_sunday">Total straight hrs</label>
@@ -87,8 +87,9 @@ permalink: /edit-employee-details/
 <!--
   <a class="link_block add_overtime" href="#">+ Add overtime</a>
 -->
-  <h5>+ Add overtime</h5>
-  <fieldset>
+  <strong>+ Add overtime</strong>
+  <!-- <fieldset> -->
+    <legend style="display:none;">&nbsp;</legend>
     <div class="form_group-rate">
       <div class="form_group-rate-item">
         <label for="day_sunday">Sun.</label>
@@ -96,40 +97,41 @@ permalink: /edit-employee-details/
       </div>
       <div class="form_group-rate-item">
         <label for="day_sunday">Mon.</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="1">
+        <input aria-describedby="dobHint" class="usa-form-control" id="day_monday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="1">
       </div>
       <div class="form_group-rate-item">
         <label for="day_sunday">Tue.</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="1">
+        <input aria-describedby="dobHint" class="usa-form-control" id="day_tuesday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="1">
       </div>
       <div class="form_group-rate-item">
         <label for="day_sunday">Wed.</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="1">
+        <input aria-describedby="dobHint" class="usa-form-control" id="day_wednesday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="1">
       </div>
       <div class="form_group-rate-item">
         <label for="day_sunday">Thu.</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="1">
+        <input aria-describedby="dobHint" class="usa-form-control" id="day_thurday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="1">
       </div>
       <div class="form_group-rate-item">
         <label for="day_sunday">Fri.</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="1">
+        <input aria-describedby="dobHint" class="usa-form-control" id="day_friday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="1">
       </div>
       <div class="form_group-rate-item">
         <label for="day_sunday">Sat.</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="0">
+        <input aria-describedby="dobHint" class="usa-form-control" id="day_saturday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="0">
       </div>
       <div class="form_group-rate-item form_group-rate-total">
         <label for="day_sunday">Total OT hrs</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="5">
+        <input aria-describedby="dobHint" class="usa-form-control" id="total-hours" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="5">
       </div>
       <div class="form_group-rate-item form_group-rate-rate">
         <label for="day_sunday">Rate</label>
-        <input aria-describedby="dobHint" class="usa-form-control" id="day_sunday" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="24.64">
+        <input aria-describedby="dobHint" class="usa-form-control" id="rate" name="rates" pattern="0?[1-9]|1[012]" type="number" min="1" max="8" value="24.64">
       </div>
     </div>
   </fieldset>
   <div class="form-small">
     <fieldset>
+      <legend>Gross earnings</legend>
       <label for="gross-federal">Gross earnings: Federal projects</label>
       <input id="gross-federal" name="employee" type="number" required="" aria-required="true" value="776.02">
       <label for="gross-total">Gross earnings: Total</label>
@@ -153,11 +155,11 @@ permalink: /edit-employee-details/
       <input id="other-description" name="employee" type="text" value="Medical insurance">
       <label for="total-deductions">Total Deductions</label>
       <input class="total-deductions" id="total-deductions" name="employee" type="number" value="320.64">
-    </fieldset>
+    <!-- </fieldset> -->
   </div>
   <h2>Net wages paid: $633.79</h2>
   <a class="usa-button usa-button-outline" href="{{ site.baseurl }}/enter-employee-details/">+ Add another employee</a>
   <br>
-  <a class="usa-button button-long" href="{{ site.baseurl }}/review-hours-and-earnings/">Continue</a>
+  <button type="submit" class="usa-button button-long" href="{{ site.baseurl }}/review-hours-and-earnings/">Continue</button>
   <a class="button-back" href="{{ site.baseurl }}/create-or-choose-new-payroll/">Go back</a>
 </form>

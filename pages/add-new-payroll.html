@@ -7,27 +7,27 @@ permalink: /add-new-payroll/
 <h1>{{ page.title }}</h1>
 
 <ul id="breadcrumbs">
-    <li class="completed"><a href="">1) Select contract &amp; date</a></li>
-    <li class="current"><a href="">2) Complete payroll</a></li>
-    <li class="disabled"><a href="">3) Review hours</a></li>
-    <li class="disabled"><a href="">4) Review deductions</a></li>
-    <li class="disabled"><a href="">5) Sign &amp; certify</a></li>
+    <li class="completed"><a href="#">1) Select contract &amp; date</a></li>
+    <li class="current"><a href="#">2) Complete payroll</a></li>
+    <li class="disabled"><a href="#">3) Review hours</a></li>
+    <li class="disabled"><a href="#">4) Review deductions</a></li>
+    <li class="disabled"><a href="#">5) Sign &amp; certify</a></li>
 </ul>
 
 <div class="usa-width-one-whole">
   <form>
     <fieldset>
-      <label for="contract_number">Contract number</label>
-      <select name="contract_number" id="contract_number" required="">
+      <legend >Contract number</legend>
+      <select name="contract_number" id="contract_number" required="" aria-label="contract number">
         <option value="?" selected="selected"></option>
         <option label="ABC-DE-6000" value="6000">ABC-DE-6000</option>
         <option label="ABC-DE-6001" value="6001">ABC-DE-6001</option>
         <option label="ABC-DE-6002" value="6002">ABC-DE-6002</option>
       </select>
 
-      <label>Payroll week end date</label>
+      <label for="week-end-date">Payroll week end date</label>
       <span class="usa-form-hint usa-datefield-hint" id="date-hint">(For example: 04 28 1986)</span>
-      <input type="hidden" name="week_end_date">
+      <input type="hidden" name="week_end_date" id="week-end-date">
       <div class="usa-date-of-birth">
         <div class="usa-datefield usa-form-group usa-form-group-month" aria-describedby="date-hint">
           <input aria-labelledby="end_month" class="usa-form-control" id="end_month" name="end_week" pattern="0?[1-9]|1[012]" type="text">

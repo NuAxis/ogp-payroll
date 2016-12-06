@@ -6,7 +6,7 @@ logged: 'no'
 ---
 
 <h1>{{ page.title }}</h1>
-<h4 class="welcome-text">Welcome! This text will explain what this is, who should use it, and what you’ll need to get started.</h4>
+<h2 class="welcome-text">Welcome! This text will explain what this is, who should use it, and what you’ll need to get started.</h2>
 <form>
   <fieldset>
     <legend class="usa-drop_text">Create an account</legend>
@@ -22,6 +22,6 @@ logged: 'no'
     <input id="password" name="new-account" type="password">
     <label for="confirm-password">Confirm password</label>
     <input id="confirm-password" name="new-account" type="password">
-    <a class="usa-button button-long" href="{{ site.baseurl }}/welcome/">Sign up</a>
+    <button type="submit" class="usa-button button-long" href="{{ site.baseurl }}/welcome/">Sign up</button>
   </fieldset>
 </form>

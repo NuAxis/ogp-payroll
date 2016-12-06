@@ -5,21 +5,22 @@ permalink: /assign-contractors/
 ---
 
 <h1>{{ page.title }}</h1>
-<h5><span>Step 1: Enter project information</span> | Step 2: Assign contractors | <span>Step 3: Assign work classifications</span></h5>
+<div><span>Step 1: Enter project information</span> | Step 2: Assign contractors | <span>Step 3: Assign work classifications</span>
+</div>
 <div class="usa-grid">
   <div class="usa-width-one-half">
     <form>
       <fieldset>
         <legend>Subcontractor information</legend>
-        <label for="subcontractor">Company name</label>
+        <label for="sub-contractor">Company name</label>
         <input id="sub-contractor" name="subcontractor" required="" aria-required="true">
-        <label for="subcontractor-contact">Point of contact</label>
+        <label for="sub-contractor-contact">Point of contact</label>
         <input id="sub-contractor-contact" name="subcontractor" required="" aria-required="true">
-        <label for="subcontractor-email">Email</label>
+        <label for="sub-contractor-email">Email</label>
         <input id="sub-contractor-email" name="subcontractor" required="" aria-required="true">
-        <label for="subcontractor-phone">Phone number</label>
+        <label for="sub-contractor-phone">Phone number</label>
         <input id="sub-contractor-phone" name="subcontractor" required="" aria-required="true">
-        <label for"start-date">Projected start date</label>
+        <legend for"start-date">Projected start date</legend>
         <span class="usa-form-hint usa-datefield-hint" id="date-hint">For example: 04 28 1986</span>
         <div class="usa-date-of-birth">
           <div class="usa-datefield usa-form-group usa-form-group-month">
@@ -37,7 +38,7 @@ permalink: /assign-contractors/
         </div>
       </fieldset>
       <fieldset>
-        <label for"end-date">Projected end date</label>
+        <legend for"end-date">Projected end date</legend>
         <div class="usa-date-of-birth">
           <div class="usa-datefield usa-form-group usa-form-group-month">
             <label for="end_month">Month</label>
@@ -54,18 +55,19 @@ permalink: /assign-contractors/
         </div>
 
       </fieldset>
-      <p><a class="usa-button">Add subcontractor</a></p>
+      <p><button type="submit" class="usa-button">Add subcontractor</button></p>
     </form>
   </div>
 <div class="usa-width-one-half">
   <aside>
-    <h4>Entering subcontractors</h4>
+    <h2>Entering subcontractors</h2>
     <p>Every subcontractor listed here will be able to send certified payroll electronically through this system. Subcontractors will be able to edit and update their contact information, as well as add any second- or third-tier subs to the system.</p>
   </aside>
 </div>
 
 </div>
-    <table class="usa-table-borderless">
+    <table summary="list of assigned subcontractor" class="cpa-table">
+      <caption>assigned subcontractor</caption>
       <thead>
         <tr>
           <th scope="col">Assigned subcontractor</th>
@@ -73,7 +75,7 @@ permalink: /assign-contractors/
           <th scope="col">Email</th>
           <th scope="col">Phone</th>
           <th scope="col">Projected start/end dates</th>
-          <th></th>
+          <th scope="col"></th>
         </tr>
       </thead>
       <tbody>
@@ -83,7 +85,7 @@ permalink: /assign-contractors/
           <td></td>
           <td>(312)555-5555</td>
           <td>March 1, 2015 — May 25, 2016</td>
-          <td><a href="">Remove</a></td>
+          <td><a href="#">Remove</a></td>
         </tr>
         <tr>
           <th scope="row">Diggedy Dozer, Inc.</th>
@@ -91,7 +93,7 @@ permalink: /assign-contractors/
           <td><span class="email">hello@diggedy.com</span></td>
           <td>(212)555-5555</td>
           <td>Dec. 1, 2015 — Aug. 1, 2016</td>
-          <td><a href="">Remove</a></td>
+          <td><a href="#">Remove</a></td>
         </tr>
       </tbody>
     </table>

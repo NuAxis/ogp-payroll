@@ -5,19 +5,19 @@ permalink: /add-subcontractor/
 ---
 
 <h1>{{ page.title }}</h1>
-<h3>Contract #ACE-CE-4152</h3>
+<strong>Contract #ACE-CE-4152</strong>
 <div class="usa-width-one-half">
   <form>
     <fieldset>
       <legend>Subcontractor information</legend>
-      <label for="subcontractor">Company name</label>
-      <input id="sub-contractor" name="subcontractor" required="" aria-required="true">
+      <label for="sub-contractor">Company name</label>
+      <input id="sub-contractor" aria-label="sub contractor" name="subcontractor" required="" aria-required="true">
       <label for="subcontractor-contact">Point of contact</label>
-      <input id="sub-contractor-contact" name="subcontractor" required="" aria-required="true">
-      <label for="subcontractor-email">Email</label>
-      <input id="sub-contractor-email" name="subcontractor" required="" aria-required="true">
-      <label for="subcontractor-phone">Phone number</label>
-      <input id="sub-contractor-phone" name="subcontractor" required="" aria-required="true">
+      <input id="sub-contractor-contact" aria-label="contract" name="subcontractor" required="" aria-required="true">
+      <label for="sub-contractor-email">Email</label>
+      <input id="sub-contractor-email" aria-label="email" name="subcontractor" required="" aria-required="true">
+      <label for="sub-contractor-phone">Phone number</label>
+      <input id="sub-contractor-phone" aria-label="phone" name="subcontractor" required="" aria-required="true">
       <label for"start-date">Projected start date</label>
       <span class="usa-form-hint usa-datefield-hint" id="date-hint">For example: 04 28 1986</span>
       <div class="usa-date-of-birth">
@@ -36,6 +36,7 @@ permalink: /add-subcontractor/
       </div>
     </fieldset>
     <fieldset>
+      <!-- <legend style="display:none;">&nbsp;</legend> -->
       <label for"end-date">Projected end date</label>
       <div class="usa-date-of-birth">
         <div class="usa-datefield usa-form-group usa-form-group-month">
@@ -52,14 +53,12 @@ permalink: /add-subcontractor/
         </div>
       </div>
     </fieldset>
-    <p><a href="{{ site.baseurl }}/prime/view-contract/" class="usa-button">Add subcontractor</a></p>
+    <p><button type="submit" href="{{ site.baseurl }}/prime/view-contract/" class="usa-button">Add subcontractor</a></button>
   </form>
 </div>
 <div class="usa-width-one-half">
   <aside>
-    <h4>Entering subcontractors</h4>
+    <h2>Entering subcontractors</h2>
     <p>Every subcontractor listed here will be able to send certified payroll electronically through this system. Subcontractors will be able to edit and update their contact information, as well as add any second- or third-tier subs to the system.</p>
   </aside>
 </div>
-
-

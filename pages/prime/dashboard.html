@@ -7,19 +7,19 @@ permalink: /dashboard/
   <h1>Dashboard</h1>
   <p><a class="usa-button" href="{{ site.baseurl }}/add-new-payroll/">Create new payroll record</a>
   <br>
-  <small>No work done this week? You'll still need to file a no-work payroll.</small></p>
+No work done this week? You'll still need to file a no-work payroll.</p>
 </div><!--closing div from template-->
 
 <div class="usa-grid table-filter-grid">
   <div class="table-filter">
-    <div class="filter-title"><strong>Filter</strong></div>
+    <div class="filter-title"><strong>Filter</em></strong>
     <div class="filter-group">
       <span>Date rage:</span>
-      <input type="text" placeholder="MM/DD/YY">
+      <input type="text" aria-label="date range" placeholder="MM/DD/YY">
     </div>
     <div class="filter-group attached">
       <span>to</span>
-      <input type="text" placeholder="MM/DD/YY">
+      <input type="text" aria-label="to" placeholder="MM/DD/YY">
     </div>
     <div class="filter-group">
       <select name="status" id="status" aria-label="status">
@@ -56,36 +56,37 @@ permalink: /dashboard/
 <div class="usa-grid">
   <div class="usa-width-one-whole">
     <div id="payrolls">
-    <table class="usa-table-borderless zebra cpa-table">
+    <table summary="payroll list" class="usa-table-borderless zebra cpa-table">
+      <caption>&nbsp;</caption>
       <thead>
         <tr>
           <th scope="col">
-            <a class="sort" data-sort="weekend">
-              <i class="fa fa-sort" aria-hidden="false"></i>
+            <a href="#" class="sort" data-sort="weekend">
+              <strong class="fa fa-sort" aria-hidden="false"></strong>
               Week end date
             </a>
           </th>
           <th scope="col">
-            <a class="sort" data-sort="contract-number">
-              <i class="fa fa-sort" aria-hidden="false"></i>
+            <a href="#" class="sort" data-sort="contract-number">
+              <strong class="fa fa-sort" aria-hidden="false"></strong>
               Contract
             </a>
           </th>
           <th scope="col">
-            <a class="sort" data-sort="contractor">
-              <i class="fa fa-sort" aria-hidden="false"></i>
+            <a href="#" class="sort" data-sort="contractor">
+              <strong class="fa fa-sort" aria-hidden="false"></strong>
               Contractor
             </a>
             </th>
           <th scope="col">
-            <a class="sort" data-sort="payroll-number">
-              <i class="fa fa-sort" aria-hidden="false"></i>
+            <a href="#" class="sort" data-sort="payroll-number">
+              <strong class="fa fa-sort" aria-hidden="false"></strong>
               Payroll #
             </a>
           </th>
           <th scope="col">
-            <a class="sort" data-sort="status">
-              <i class="fa fa-sort" aria-hidden="false"></i>
+            <a href="#" class="sort" data-sort="status">
+              <strong class="fa fa-sort" aria-hidden="false"></strong>
               Status
             </a>
           </th>
@@ -99,7 +100,7 @@ permalink: /dashboard/
           <td class="contractor"><a href="{{ site.baseurl }}/profile/acme/">ACME Construction</a></td>
           <td class="payroll-number">21</td>
           <td class="status">
-            <i class="fa fa-check" aria-hidden="false"></i>
+            <strong class="fa fa-check" aria-hidden="false"></strong>
             <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
@@ -109,7 +110,7 @@ permalink: /dashboard/
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?great-lakes-building">Great Lakes Building</a></td>
           <td class="payroll-number">12</td>
           <td class="status">
-                <i class="fa fa-times" aria-hidden="false"></i>
+                <strong class="fa fa-times" aria-hidden="false"></strong>
                 <span>Delinquent</span>
           </td>
           <td></td>
@@ -120,7 +121,7 @@ permalink: /dashboard/
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?moore-and-sons-construction">Moore & Sons Construction</a></td>
           <td class="payroll-number">18</td>
           <td class="status">
-            <i class="fa fa-check" aria-hidden="false"></i>
+            <strong class="fa fa-check" aria-hidden="false"></strong>
             <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
@@ -130,7 +131,7 @@ permalink: /dashboard/
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?atlantic-northern">Atlantic Northern</a></td>
           <td class="payroll-number">1</td>
           <td class="status">
-            <i class="fa fa-check" aria-hidden="false"></i>
+            <strong class="fa fa-check" aria-hidden="false"></strong>
             <strong><a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Ready to send</a></strong>
             <span class="usa-label status-new">New</span>
           </td>
@@ -145,7 +146,7 @@ permalink: /dashboard/
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?vandelay-industries">Vandelay Industries</a></td>
           <td class="payroll-number">1</td>
           <td class="status">
-            <i class="fa fa-check" aria-hidden="false"></i>
+            <strong class="fa fa-check" aria-hidden="false"></strong>
             <strong><a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Ready to send</a></strong>
             <span class="usa-label status-new">New</span>
           </td>
@@ -160,7 +161,7 @@ permalink: /dashboard/
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?roof-doctor">Roof Doctor</a></td>
           <td class="payroll-number">6</td>
           <td class="status">
-            <i class="fa fa-check" aria-hidden="false"></i>
+            <strong class="fa fa-check" aria-hidden="false"></strong>
             <strong><a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Ready to send</a></strong></td>
           <td>
             <input id="select-03" type="checkbox" name="select" value="select-03">
@@ -173,7 +174,7 @@ permalink: /dashboard/
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?roof-doctor">Roof Doctor</a></td>
           <td class="payroll-number">5</td>
           <td class="status">
-            <i class="fa fa-check" aria-hidden="false"></i>
+            <strong class="fa fa-check" aria-hidden="false"></strong>
             <strong><a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Ready to send</a></strong>
           </td>
           <td>
@@ -184,12 +185,12 @@ permalink: /dashboard/
         <tr>
           <td class="weekend">March 25, 2016</td>
           <td class="contract-number"><a href="{{ site.baseurl }}/prime/view-contract/">ACE-CE-1654</a></td>
-          <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?dunder-mifflen">Dunder Mifflen</a><br/><small><em><a href="{{ site.baseurl }}/profile/sub/?roof-doctor">Roof Doctor</a> sub</em><small></td>
+          <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?dunder-mifflen">Dunder Mifflen</a><br/><em><a href="{{ site.baseurl }}/profile/sub/?roof-doctor">Roof Doctor</a> sub<em></td>
           <td class="payroll-number">5</td>
           <td class="status">
             <div class="tooltip">
-              <span class="tooltiptext"><b>System flag</b>: the hourly rate for carpenter doesn't match what's in the contract</span>
-              <i class="fa fa-flag" aria-hidden="false"></i>
+              <span class="tooltiptext"><strong>System flag</strong>: the hourly rate for carpenter doesn't match what's in the contract</span>
+              <strong class="fa fa-flag" aria-hidden="false"></strong>
               <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Flagged</a></td>
             </div>
           </td>
@@ -202,12 +203,12 @@ permalink: /dashboard/
         <tr>
           <td class="weekend">March 25, 2016</td>
           <td class="contract-number"><a href="{{ site.baseurl }}/prime/view-contract/">ACE-CE-1654</a></td>
-          <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?cogswell-cogs">Cogswell Cogs</a><br/><small><em><a href="{{ site.baseurl }}/profile/sub/?roof-doctor">Roof Doctor</a> sub</em><small></td>
+          <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?cogswell-cogs">Cogswell Cogs</a><br/><em><a href="{{ site.baseurl }}/profile/sub/?roof-doctor">Roof Doctor</a> sub<em></td>
           <td class="payroll-number">5</td>
           <td class="status">
             <div class="tooltip">
-              <span class="tooltiptext"><b>My comment</b>: double-check whether we have documentation for an apprentice program</span>
-              <i class="fa fa-flag" aria-hidden="false"></i>
+              <span class="tooltiptext"><strong>My comment</strong>: double-check whether we have documentation for an apprentice program</span>
+              <strong class="fa fa-flag" aria-hidden="false"></strong>
               <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Flagged</a></td>
             </div>
           </td>
@@ -223,7 +224,7 @@ permalink: /dashboard/
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?moore-and-sons-construction">Moore and Sons Construction</a></td>
           <td class="payroll-number">17</td>
           <td class="status">
-            <i class="fa fa-check" aria-hidden="false"></i>
+            <strong class="fa fa-check" aria-hidden="false"></strong>
             <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
@@ -234,8 +235,8 @@ permalink: /dashboard/
           <td class="payroll-number">20</td>
           <td class="status">
             <div class="tooltip">
-              <span class="tooltiptext"><b>Contracting officer comment</b>: I've found a problem, I'm sending it back to you to fix</span>
-              <i class="fa fa-flag" aria-hidden="false"></i>
+              <span class="tooltiptext"><strong>Contracting officer comment</strong>: I've found a problem, I'm sending it back to you to fix</span>
+              <strong class="fa fa-flag" aria-hidden="false"></strong>
               <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Flagged</a></td>
             </div>
           </td>
@@ -247,7 +248,7 @@ permalink: /dashboard/
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?great-lakes-building">Great Lakes Building</a></td>
           <td class="payroll-number">11</td>
           <td class="status">
-            <i class="fa fa-times" aria-hidden="false"></i>
+            <strong class="fa fa-times" aria-hidden="false"></strong>
             <span>Delinquent</span>
           </td>
           <td></td>
@@ -258,7 +259,7 @@ permalink: /dashboard/
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?roof-doctor">Roof Doctor</a></td>
           <td class="payroll-number">4</td>
           <td class="status">
-            <i class="fa fa-check" aria-hidden="false"></i>
+            <strong class="fa fa-check" aria-hidden="false"></strong>
             <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
@@ -268,7 +269,7 @@ permalink: /dashboard/
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?moore-and-sons-construction">Moore and Sons Construction</a></td>
           <td class="payroll-number">16</td>
           <td class="status">
-            <i class="fa fa-check" aria-hidden="false"></i>
+            <strong class="fa fa-check" aria-hidden="false"></strong>
             <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
@@ -278,7 +279,7 @@ permalink: /dashboard/
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?diggedy-dozer">Diggedy Dozer</a></td>
           <td class="payroll-number">19</td>
           <td class="status">
-            <i class="fa fa-check" aria-hidden="false"></i>
+            <strong class="fa fa-check" aria-hidden="false"></strong>
             <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
@@ -288,7 +289,7 @@ permalink: /dashboard/
           <td class="contractor"><a href="{{ site.baseurl }}/profile/acme/">ACME Construction</a></td>
           <td class="payroll-number">19</td>
           <td class="status">
-            <i class="fa fa-check" aria-hidden="false"></i>
+            <strong class="fa fa-check" aria-hidden="false"></strong>
             <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
@@ -298,7 +299,7 @@ permalink: /dashboard/
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?roof-doctor">Roof Doctor</a></td>
           <td class="payroll-number">3</td>
           <td class="status">
-            <i class="fa fa-check" aria-hidden="false"></i>
+            <strong class="fa fa-check" aria-hidden="false"></strong>
             <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
@@ -308,7 +309,7 @@ permalink: /dashboard/
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?moore-and-sons-construction">Moore and Sons Construction</a></td>
           <td class="payroll-number">15</td>
           <td class="status">
-            <i class="fa fa-times" aria-hidden="false"></i>
+            <strong class="fa fa-times" aria-hidden="false"></strong>
             <span>Delinquent</span>
           </td>
           <td></td>
@@ -319,7 +320,7 @@ permalink: /dashboard/
           <td class="contractor"><a href="{{ site.baseurl }}/profile/sub/?diggedy-dozer">Diggedy Dozer</a></td>
           <td class="payroll-number">18</td>
           <td class="status">
-            <i class="fa fa-check" aria-hidden="false"></i>
+            <strong class="fa fa-check" aria-hidden="false"></strong>
             <a href="{{ site.baseurl }}/prime/review-sub-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
@@ -329,7 +330,7 @@ permalink: /dashboard/
           <td class="contractor"><a href="{{ site.baseurl }}/profile/acme">ACME Construction</a></td>
           <td class="payroll-number">18</td>
           <td class="status">
-            <i class="fa fa-check" aria-hidden="false"></i>
+            <strong class="fa fa-check" aria-hidden="false"></strong>
             <a href="{{ site.baseurl }}/review-hours-and-earnings/">Sent</a></td>
           <td></td>
         </tr>
